@@ -1,4 +1,4 @@
-package eu.khonsu.libraries.materialcards.ui.view
+package eu.khonsu.libraries.materialcards
 
 import android.content.Context
 import android.graphics.drawable.Drawable
@@ -9,7 +9,6 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatImageButton
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.cardview.widget.CardView
-import eu.khonsu.libraries.materialcards.R
 import eu.khonsu.libraries.materialcards.extensions.hideIf
 
 /**
