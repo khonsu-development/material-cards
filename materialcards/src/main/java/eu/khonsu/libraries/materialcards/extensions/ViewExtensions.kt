@@ -1,4 +1,4 @@
-package eu.khonsu.materialcards.extensions
+package eu.khonsu.libraries.materialcards.extensions
 
 import android.view.View
 
