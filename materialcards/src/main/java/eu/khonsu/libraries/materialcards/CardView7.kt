@@ -40,7 +40,9 @@ class CardView7(context: Context, attrs: AttributeSet) : CardView(context, attrs
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CardView7)
         for (index in 0 until typedArray.indexCount) {
             when (val attr = typedArray.getIndex(index)) {
-                R.styleable.CardView7_cv7_srcImage -> setImageSrc(typedArray.getDrawable(attr))
+                R.styleable.CardView7_cv7_srcImage -> setImageSrc(
+                    typedArray.getResourceId(attr, R.drawable.background_image)
+                )
                 R.styleable.CardView7_cv7_title -> setTitleText(typedArray.getString(attr))
                 R.styleable.CardView7_cv7_subtitle -> setSubtitleText(typedArray.getString(attr))
                 R.styleable.CardView7_cv7_action1Text -> setAction1Text(typedArray.getString(attr))
@@ -72,8 +74,8 @@ class CardView7(context: Context, attrs: AttributeSet) : CardView(context, attrs
 
     fun getImageSrc(): Drawable? = image?.drawable
 
-    fun setImageSrc(value: Drawable?) {
-        image?.setImageDrawable(value)
+    fun setImageSrc(@DrawableRes value: Int) {
+        image?.setImageResource(value)
     }
 
     fun getTitleText(): CharSequence? = title?.text
