@@ -4,11 +4,11 @@
     android:id="@+id/media_card_view"
     style="@style/CardView.Light"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="300dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/image"
