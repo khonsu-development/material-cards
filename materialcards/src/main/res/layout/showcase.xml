@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <eu.khonsu.libraries.materialcards.CardView5
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/big_padding"
+        app:cv5_action1Text="Action 1"
+        app:cv5_action2Text="Action 2"
+        app:cv5_subtitle="This is the subtitle for this card view"
+        app:cv5_supplementalAction1Drawable="@drawable/ic_star_outline"
+        app:cv5_supplementalAction2Drawable="@drawable/ic_star_outline"
+        app:cv5_supplementalAction3Drawable="@drawable/ic_star_outline"
+        app:cv5_supportingText="This is the supporting text for this card view."
+        app:cv5_title="Card View 5" />
+
+    <eu.khonsu.libraries.materialcards.CardView6
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/big_padding"
+        app:cv6_action1Drawable="@drawable/ic_star_outline"
+        app:cv6_action2Drawable="@drawable/ic_star_outline"
+        app:cv6_action3Drawable="@drawable/ic_star_outline"
+        app:cv6_srcImage="@drawable/background_image" />
+
+    <eu.khonsu.libraries.materialcards.CardView7
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/big_padding"
+        app:cv7_action1Text="Action 1"
+        app:cv7_action2Text="Action 2"
+        app:cv7_srcImage="@drawable/background_image"
+        app:cv7_subtitle="This is the subtitle for this card view"
+        app:cv7_supplementalAction1Drawable="@drawable/ic_star_outline_white"
+        app:cv7_supplementalAction2Drawable="@drawable/ic_star_outline_white"
+        app:cv7_supplementalAction3Drawable="@drawable/ic_star_outline_white"
+        app:cv7_title="Card View 7" />
+</LinearLayout>
