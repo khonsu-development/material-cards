@@ -55,4 +55,15 @@
         app:cv7_supplementalAction2Drawable="@drawable/ic_star_outline_white"
         app:cv7_supplementalAction3Drawable="@drawable/ic_star_outline_white"
         app:cv7_title="@string/title_7" />
+
+    <eu.khonsu.libraries.materialcards.CardView8
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/big_padding"
+        app:cv8_action1Text="@string/action_1"
+        app:cv8_action2Text="@string/action_2"
+        app:cv8_action3Text="@string/action_3"
+        app:cv8_srcImage="@drawable/background_image"
+        app:cv8_subtitle="@string/subtitle"
+        app:cv8_title="@string/title_8" />
 </LinearLayout>
