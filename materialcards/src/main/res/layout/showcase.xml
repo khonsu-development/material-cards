@@ -9,30 +9,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/big_padding"
-        app:cv2_action1Text="Action 1"
-        app:cv2_action2Text="Action 2"
-        app:cv2_action3Text="Action 3"
+        app:cv2_action1Text="@string/action_1"
+        app:cv2_action2Text="@string/action_2"
+        app:cv2_action3Text="@string/action_3"
         app:cv2_avatarImage="@drawable/ic_avatar"
         app:cv2_srcImage="@drawable/background_image"
-        app:cv2_subtitle="This is the subtitle for this card view"
+        app:cv2_subtitle="@string/subtitle"
         app:cv2_supplementalAction1Drawable="@drawable/ic_star_outline"
         app:cv2_supplementalAction2Drawable="@drawable/ic_star_outline"
         app:cv2_supplementalAction3Drawable="@drawable/ic_star_outline"
-        app:cv2_supportingText="This is the supporting text for this card view."
-        app:cv2_title="Card View 2" />
+        app:cv2_supportingText="@string/supporting_text"
+        app:cv2_title="@string/title_2" />
 
     <eu.khonsu.libraries.materialcards.CardView5
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/big_padding"
-        app:cv5_action1Text="Action 1"
-        app:cv5_action2Text="Action 2"
-        app:cv5_subtitle="This is the subtitle for this card view"
+        app:cv5_action1Text="@string/action_1"
+        app:cv5_action2Text="@string/action_2"
+        app:cv5_subtitle="@string/subtitle"
         app:cv5_supplementalAction1Drawable="@drawable/ic_star_outline"
         app:cv5_supplementalAction2Drawable="@drawable/ic_star_outline"
         app:cv5_supplementalAction3Drawable="@drawable/ic_star_outline"
-        app:cv5_supportingText="This is the supporting text for this card view."
-        app:cv5_title="Card View 5" />
+        app:cv5_supportingText="@string/supporting_text"
+        app:cv5_title="@string/title_5" />
 
     <eu.khonsu.libraries.materialcards.CardView6
         android:layout_width="match_parent"
@@ -47,12 +47,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/big_padding"
-        app:cv7_action1Text="Action 1"
-        app:cv7_action2Text="Action 2"
+        app:cv7_action1Text="@string/action_1"
+        app:cv7_action2Text="@string/action_2"
         app:cv7_srcImage="@drawable/background_image"
-        app:cv7_subtitle="This is the subtitle for this card view"
+        app:cv7_subtitle="@string/subtitle"
         app:cv7_supplementalAction1Drawable="@drawable/ic_star_outline_white"
         app:cv7_supplementalAction2Drawable="@drawable/ic_star_outline_white"
         app:cv7_supplementalAction3Drawable="@drawable/ic_star_outline_white"
-        app:cv7_title="Card View 7" />
+        app:cv7_title="@string/title_7" />
 </LinearLayout>
