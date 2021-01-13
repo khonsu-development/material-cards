@@ -68,13 +68,13 @@ class CardView2(context: Context, attrs: AttributeSet) : CardView(context, attrs
                     typedArray.getString(attr)
                 )
                 R.styleable.CardView2_cv2_supplementalAction1Drawable -> setSupplementalAction1Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline_white)
+                    typedArray.getResourceId(attr, R.drawable.ic_star_outline)
                 )
                 R.styleable.CardView2_cv2_supplementalAction2Drawable -> setSupplementalAction2Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline_white)
+                    typedArray.getResourceId(attr, R.drawable.ic_star_outline)
                 )
                 R.styleable.CardView2_cv2_supplementalAction3Drawable -> setSupplementalAction3Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline_white)
+                    typedArray.getResourceId(attr, R.drawable.ic_star_outline)
                 )
             }
         }

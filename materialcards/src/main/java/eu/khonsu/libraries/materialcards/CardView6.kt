@@ -31,13 +31,13 @@ class CardView6(context: Context, attrs: AttributeSet) : CardView(context, attrs
         for (index in 0 until typedArray.indexCount) {
             when (val attr = typedArray.getIndex(index)) {
                 R.styleable.CardView6_cv6_action1Drawable -> setAction1Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline_white)
+                    typedArray.getResourceId(attr, R.drawable.ic_star_outline)
                 )
                 R.styleable.CardView6_cv6_action2Drawable -> setAction2Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline_white)
+                    typedArray.getResourceId(attr, R.drawable.ic_star_outline)
                 )
                 R.styleable.CardView6_cv6_action3Drawable -> setAction3Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline_white)
+                    typedArray.getResourceId(attr, R.drawable.ic_star_outline)
                 )
             }
         }
