@@ -4,11 +4,11 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.View
+import android.widget.Button
+import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.annotation.DrawableRes
-import androidx.appcompat.widget.AppCompatButton
-import androidx.appcompat.widget.AppCompatImageButton
-import androidx.appcompat.widget.AppCompatImageView
-import androidx.appcompat.widget.AppCompatTextView
 import androidx.cardview.widget.CardView
 import eu.khonsu.libraries.materialcards.extensions.hideIf
 
@@ -20,14 +20,14 @@ import eu.khonsu.libraries.materialcards.extensions.hideIf
 @Suppress("MemberVisibilityCanBePrivate", "unused")
 class CardView7(context: Context, attrs: AttributeSet) : CardView(context, attrs) {
 
-    var image: AppCompatImageView? = null
-    var title: AppCompatTextView? = null
-    var subtitle: AppCompatTextView? = null
-    var action1: AppCompatButton? = null
-    var action2: AppCompatButton? = null
-    var supplementalAction1: AppCompatImageButton? = null
-    var supplementalAction2: AppCompatImageButton? = null
-    var supplementalAction3: AppCompatImageButton? = null
+    var image: ImageView? = null
+    var title: TextView? = null
+    var subtitle: TextView? = null
+    var action1: Button? = null
+    var action2: Button? = null
+    var supplementalAction1: ImageButton? = null
+    var supplementalAction2: ImageButton? = null
+    var supplementalAction3: ImageButton? = null
 
     private fun init(context: Context, attrs: AttributeSet) {
         View.inflate(context, R.layout.card_view_7, this)
