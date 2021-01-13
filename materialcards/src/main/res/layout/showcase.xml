@@ -5,6 +5,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <eu.khonsu.libraries.materialcards.CardView2
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/big_padding"
+        app:cv2_action1Text="Action 1"
+        app:cv2_action2Text="Action 2"
+        app:cv2_action3Text="Action 3"
+        app:cv2_avatarImage="@drawable/ic_avatar"
+        app:cv2_srcImage="@drawable/background_image"
+        app:cv2_subtitle="This is the subtitle for this card view"
+        app:cv2_supplementalAction1Drawable="@drawable/ic_star_outline"
+        app:cv2_supplementalAction2Drawable="@drawable/ic_star_outline"
+        app:cv2_supplementalAction3Drawable="@drawable/ic_star_outline"
+        app:cv2_supportingText="This is the supporting text for this card view."
+        app:cv2_title="Card View 2" />
+
     <eu.khonsu.libraries.materialcards.CardView5
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

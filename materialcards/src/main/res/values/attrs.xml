@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="CardView2">
+        <attr name="cv2_avatarImage" format="reference" />
+        <attr name="cv2_srcImage" format="reference" />
+        <attr name="cv2_title" format="string" localization="suggested" />
+        <attr name="cv2_subtitle" format="string" localization="suggested" />
+        <attr name="cv2_supportingText" format="string" localization="suggested" />
+        <attr name="cv2_action1Text" format="string" localization="suggested" />
+        <attr name="cv2_action2Text" format="string" localization="suggested" />
+        <attr name="cv2_action3Text" format="string" localization="suggested" />
+        <attr name="cv2_supplementalAction1Drawable" format="reference" />
+        <attr name="cv2_supplementalAction2Drawable" format="reference" />
+        <attr name="cv2_supplementalAction3Drawable" format="reference" />
+    </declare-styleable>
     <declare-styleable name="CardView5">
         <attr name="cv5_title" format="string" localization="suggested" />
         <attr name="cv5_subtitle" format="string" localization="suggested" />
