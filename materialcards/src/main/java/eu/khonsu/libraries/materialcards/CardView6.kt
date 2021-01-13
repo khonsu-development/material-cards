@@ -45,9 +45,9 @@ class CardView6(context: Context, attrs: AttributeSet) : CardView(context, attrs
     }
 
     private fun initComponents() {
-        actionButton1 = findViewById(R.id.action_1)
-        actionButton2 = findViewById(R.id.action_2)
-        actionButton2 = findViewById(R.id.action_3)
+        actionButton1 = findViewById(R.id.action_button_1)
+        actionButton2 = findViewById(R.id.action_button_2)
+        actionButton2 = findViewById(R.id.action_button_3)
     }
 
     fun getAction1Drawable(): Drawable? = actionButton1?.drawable

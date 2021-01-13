@@ -65,7 +65,7 @@ class CardView7(context: Context, attrs: AttributeSet) : CardView(context, attrs
         image = findViewById(R.id.image)
         title = findViewById(R.id.title)
         subtitle = findViewById(R.id.subtitle)
-        action1 = findViewById(R.id.action_1)
+        action1 = findViewById(R.id.action_button_1)
         action2 = findViewById(R.id.action2)
         supplementalAction1 = findViewById(R.id.supplemental_action_1)
         supplementalAction2 = findViewById(R.id.supplemental_action_2)
