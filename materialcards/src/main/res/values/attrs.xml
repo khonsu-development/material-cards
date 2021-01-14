@@ -57,4 +57,13 @@
         <attr name="cv9_action2Text" format="string" localization="suggested" />
         <attr name="cv9_action3Text" format="string" localization="suggested" />
     </declare-styleable>
+    <declare-styleable name="CardView10">
+        <attr name="cv10_title" format="string" localization="suggested" />
+        <attr name="cv10_subtitle" format="string" localization="suggested" />
+        <attr name="cv10_supporting_text" format="string" localization="suggested" />
+        <attr name="cv10_srcImage" format="reference" />
+        <attr name="cv10_action1Text" format="string" localization="suggested" />
+        <attr name="cv10_action2Text" format="string" localization="suggested" />
+        <attr name="cv10_action3Text" format="string" localization="suggested" />
+    </declare-styleable>
 </resources>
