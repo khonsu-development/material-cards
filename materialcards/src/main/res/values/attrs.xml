@@ -54,7 +54,7 @@
     <declare-styleable name="CardView8">
         <attr name="cv8_title" format="string" localization="suggested" />
         <attr name="cv8_subtitle" format="string" localization="suggested" />
-        <attr name="cv8_supporting_text" format="string" localization="suggested" />
+        <attr name="cv8_supportingText" format="string" localization="suggested" />
         <attr name="cv8_srcImage" format="reference" />
         <attr name="cv8_action1Text" format="string" localization="suggested" />
         <attr name="cv8_action2Text" format="string" localization="suggested" />
@@ -63,7 +63,7 @@
     <declare-styleable name="CardView9">
         <attr name="cv9_title" format="string" localization="suggested" />
         <attr name="cv9_subtitle" format="string" localization="suggested" />
-        <attr name="cv9_supporting_text" format="string" localization="suggested" />
+        <attr name="cv9_supportingText" format="string" localization="suggested" />
         <attr name="cv9_srcImage" format="reference" />
         <attr name="cv9_action1Text" format="string" localization="suggested" />
         <attr name="cv9_action2Text" format="string" localization="suggested" />
@@ -72,7 +72,7 @@
     <declare-styleable name="CardView10">
         <attr name="cv10_title" format="string" localization="suggested" />
         <attr name="cv10_subtitle" format="string" localization="suggested" />
-        <attr name="cv10_supporting_text" format="string" localization="suggested" />
+        <attr name="cv10_supportingText" format="string" localization="suggested" />
         <attr name="cv10_srcImage" format="reference" />
         <attr name="cv10_action1Text" format="string" localization="suggested" />
         <attr name="cv10_action2Text" format="string" localization="suggested" />

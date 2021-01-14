@@ -1,123 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <eu.khonsu.libraries.materialcards.CardView4
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/big_padding"
-        app:cv4_action1Text="@string/action_1"
-        app:cv4_action2Text="@string/action_2"
-        app:cv4_action3Text="@string/action_3"
-        app:cv4_srcImage="@drawable/background_image"
-        app:cv4_subtitle="@string/subtitle"
-        app:cv4_supportingText="@string/supporting_text_long"
-        app:cv4_title="@string/title_4" />
+        android:orientation="vertical">
 
-    <eu.khonsu.libraries.materialcards.CardView1
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/big_padding"
-        app:cv1_srcImage="@drawable/background_image"
-        app:cv1_supportingText="@string/supporting_text_long" />
+        <eu.khonsu.libraries.materialcards.CardView1
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/big_padding"
+            app:cv1_srcImage="@drawable/background_image"
+            app:cv1_supportingText="@string/supporting_text_long" />
 
-    <eu.khonsu.libraries.materialcards.CardView2
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/big_padding"
-        app:cv2_action1Text="@string/action_1"
-        app:cv2_action2Text="@string/action_2"
-        app:cv2_action3Text="@string/action_3"
-        app:cv2_avatarImage="@drawable/ic_avatar"
-        app:cv2_srcImage="@drawable/background_image"
-        app:cv2_subtitle="@string/subtitle"
-        app:cv2_supplementalAction1Drawable="@drawable/ic_star_outline"
-        app:cv2_supplementalAction2Drawable="@drawable/ic_star_outline"
-        app:cv2_supplementalAction3Drawable="@drawable/ic_star_outline"
-        app:cv2_supportingText="@string/supporting_text_long"
-        app:cv2_title="@string/title_2" />
+        <eu.khonsu.libraries.materialcards.CardView2
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/big_padding"
+            app:cv2_action1Text="@string/action_1"
+            app:cv2_action2Text="@string/action_2"
+            app:cv2_action3Text="@string/action_3"
+            app:cv2_avatarImage="@drawable/ic_avatar"
+            app:cv2_srcImage="@drawable/background_image"
+            app:cv2_subtitle="@string/subtitle"
+            app:cv2_supplementalAction1Drawable="@drawable/ic_star_outline"
+            app:cv2_supplementalAction2Drawable="@drawable/ic_star_outline"
+            app:cv2_supplementalAction3Drawable="@drawable/ic_star_outline"
+            app:cv2_supportingText="@string/supporting_text_long"
+            app:cv2_title="@string/title_2" />
 
-    <eu.khonsu.libraries.materialcards.CardView5
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/big_padding"
-        app:cv5_action1Text="@string/action_1"
-        app:cv5_action2Text="@string/action_2"
-        app:cv5_subtitle="@string/subtitle"
-        app:cv5_supplementalAction1Drawable="@drawable/ic_star_outline"
-        app:cv5_supplementalAction2Drawable="@drawable/ic_star_outline"
-        app:cv5_supplementalAction3Drawable="@drawable/ic_star_outline"
-        app:cv5_supportingText="@string/supporting_text"
-        app:cv5_title="@string/title_5" />
+        <eu.khonsu.libraries.materialcards.CardView4
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/big_padding"
+            app:cv4_action1Text="@string/action_1"
+            app:cv4_action2Text="@string/action_2"
+            app:cv4_action3Text="@string/action_3"
+            app:cv4_srcImage="@drawable/background_image"
+            app:cv4_subtitle="@string/subtitle"
+            app:cv4_supportingText="@string/supporting_text_long"
+            app:cv4_title="@string/title_4" />
 
-    <eu.khonsu.libraries.materialcards.CardView6
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/big_padding"
-        app:cv6_action1Drawable="@drawable/ic_star_outline"
-        app:cv6_action2Drawable="@drawable/ic_star_outline"
-        app:cv6_action3Drawable="@drawable/ic_star_outline"
-        app:cv6_srcImage="@drawable/background_image" />
+        <eu.khonsu.libraries.materialcards.CardView5
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/big_padding"
+            app:cv5_action1Text="@string/action_1"
+            app:cv5_action2Text="@string/action_2"
+            app:cv5_subtitle="@string/subtitle"
+            app:cv5_supplementalAction1Drawable="@drawable/ic_star_outline"
+            app:cv5_supplementalAction2Drawable="@drawable/ic_star_outline"
+            app:cv5_supplementalAction3Drawable="@drawable/ic_star_outline"
+            app:cv5_supportingText="@string/supporting_text"
+            app:cv5_title="@string/title_5" />
 
-    <eu.khonsu.libraries.materialcards.CardView7
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/big_padding"
-        app:cv7_action1Text="@string/action_1"
-        app:cv7_action2Text="@string/action_2"
-        app:cv7_srcImage="@drawable/background_image"
-        app:cv7_subtitle="@string/subtitle"
-        app:cv7_supplementalAction1Drawable="@drawable/ic_star_outline_white"
-        app:cv7_supplementalAction2Drawable="@drawable/ic_star_outline_white"
-        app:cv7_supplementalAction3Drawable="@drawable/ic_star_outline_white"
-        app:cv7_title="@string/title_7" />
+        <eu.khonsu.libraries.materialcards.CardView6
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/big_padding"
+            app:cv6_action1Drawable="@drawable/ic_star_outline"
+            app:cv6_action2Drawable="@drawable/ic_star_outline"
+            app:cv6_action3Drawable="@drawable/ic_star_outline"
+            app:cv6_srcImage="@drawable/background_image" />
 
-    <eu.khonsu.libraries.materialcards.CardView8
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/big_padding"
-        app:cv8_action1Text="@string/action_1"
-        app:cv8_action2Text="@string/action_2"
-        app:cv8_action3Text="@string/action_3"
-        app:cv8_srcImage="@drawable/background_image"
-        app:cv8_subtitle="@string/subtitle"
-        app:cv8_supporting_text="@string/supporting_text_long"
-        app:cv8_title="@string/title_8" />
+        <eu.khonsu.libraries.materialcards.CardView7
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/big_padding"
+            app:cv7_action1Text="@string/action_1"
+            app:cv7_action2Text="@string/action_2"
+            app:cv7_srcImage="@drawable/background_image"
+            app:cv7_subtitle="@string/subtitle"
+            app:cv7_supplementalAction1Drawable="@drawable/ic_star_outline_white"
+            app:cv7_supplementalAction2Drawable="@drawable/ic_star_outline_white"
+            app:cv7_supplementalAction3Drawable="@drawable/ic_star_outline_white"
+            app:cv7_title="@string/title_7" />
 
-    <eu.khonsu.libraries.materialcards.CardView9
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/big_padding"
-        app:cv9_action1Text="@string/action_1"
-        app:cv9_action2Text="@string/action_2"
-        app:cv9_action3Text="@string/action_3"
-        app:cv9_srcImage="@drawable/background_image"
-        app:cv9_subtitle="@string/subtitle"
-        app:cv9_supporting_text="@string/supporting_text"
-        app:cv9_title="@string/title_9" />
+        <eu.khonsu.libraries.materialcards.CardView8
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/big_padding"
+            app:cv8_action1Text="@string/action_1"
+            app:cv8_action2Text="@string/action_2"
+            app:cv8_action3Text="@string/action_3"
+            app:cv8_srcImage="@drawable/background_image"
+            app:cv8_subtitle="@string/subtitle"
+            app:cv8_supportingText="@string/supporting_text_long"
+            app:cv8_title="@string/title_8" />
 
-    <eu.khonsu.libraries.materialcards.CardView10
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/big_padding"
-        app:cv10_action1Text="@string/action_1"
-        app:cv10_action2Text="@string/action_2"
-        app:cv10_action3Text="@string/action_3"
-        app:cv10_srcImage="@drawable/background_image"
-        app:cv10_subtitle="@string/subtitle"
-        app:cv10_supporting_text="@string/supporting_text"
-        app:cv10_title="@string/title_10" />
+        <eu.khonsu.libraries.materialcards.CardView9
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/big_padding"
+            app:cv9_action1Text="@string/action_1"
+            app:cv9_action2Text="@string/action_2"
+            app:cv9_action3Text="@string/action_3"
+            app:cv9_srcImage="@drawable/background_image"
+            app:cv9_subtitle="@string/subtitle"
+            app:cv9_supportingText="@string/supporting_text"
+            app:cv9_title="@string/title_9" />
 
-    <eu.khonsu.libraries.materialcards.CardView11
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/big_padding"
-        app:cv11_action1Drawable="@drawable/ic_star_outline"
-        app:cv11_action2Drawable="@drawable/ic_star_outline"
-        app:cv11_action3Drawable="@drawable/ic_star_outline"
-        app:cv11_srcImage="@drawable/background_image" />
+        <eu.khonsu.libraries.materialcards.CardView10
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/big_padding"
+            app:cv10_action1Text="@string/action_1"
+            app:cv10_action2Text="@string/action_2"
+            app:cv10_action3Text="@string/action_3"
+            app:cv10_srcImage="@drawable/background_image"
+            app:cv10_subtitle="@string/subtitle"
+            app:cv10_supportingText="@string/supporting_text"
+            app:cv10_title="@string/title_10" />
 
-</LinearLayout>
+        <eu.khonsu.libraries.materialcards.CardView11
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/big_padding"
+            app:cv11_action1Drawable="@drawable/ic_star_outline"
+            app:cv11_action2Drawable="@drawable/ic_star_outline"
+            app:cv11_action3Drawable="@drawable/ic_star_outline"
+            app:cv11_srcImage="@drawable/background_image" />
+
+    </LinearLayout>
+</ScrollView>

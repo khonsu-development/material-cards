@@ -41,7 +41,7 @@ class CardView9(context: Context, attrs: AttributeSet) : CardView(context, attrs
             when (val attr = typedArray.getIndex(index)) {
                 R.styleable.CardView9_cv9_title -> setTitleText(typedArray.getString(attr))
                 R.styleable.CardView9_cv9_subtitle -> setSubtitleText(typedArray.getString(attr))
-                R.styleable.CardView9_cv9_supporting_text -> setSupportingText(
+                R.styleable.CardView9_cv9_supportingText -> setSupportingText(
                     typedArray.getString(attr)
                 )
                 R.styleable.CardView9_cv9_srcImage -> setImageSrc(
