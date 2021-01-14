@@ -26,22 +26,22 @@ class CardView6(context: Context, attrs: AttributeSet) : CardView(context, attrs
     private fun init(context: Context, attrs: AttributeSet) {
         View.inflate(context, R.layout.card_view_6, this)
         initComponents()
-        setAction1Drawable(0)
-        setAction2Drawable(0)
-        setAction3Drawable(0)
+        setActionButton1Drawable(0)
+        setActionButton2Drawable(0)
+        setActionButton3Drawable(0)
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CardView6)
         for (index in 0 until typedArray.indexCount) {
             when (val attr = typedArray.getIndex(index)) {
                 R.styleable.CardView7_cv7_srcImage -> setImageSrc(
                     typedArray.getResourceId(attr, R.drawable.background_image)
                 )
-                R.styleable.CardView6_cv6_action1Drawable -> setAction1Drawable(
+                R.styleable.CardView6_cv6_action1Drawable -> setActionButton1Drawable(
                     typedArray.getResourceId(attr, R.drawable.ic_star_outline)
                 )
-                R.styleable.CardView6_cv6_action2Drawable -> setAction2Drawable(
+                R.styleable.CardView6_cv6_action2Drawable -> setActionButton2Drawable(
                     typedArray.getResourceId(attr, R.drawable.ic_star_outline)
                 )
-                R.styleable.CardView6_cv6_action3Drawable -> setAction3Drawable(
+                R.styleable.CardView6_cv6_action3Drawable -> setActionButton3Drawable(
                     typedArray.getResourceId(attr, R.drawable.ic_star_outline)
                 )
             }
@@ -62,23 +62,23 @@ class CardView6(context: Context, attrs: AttributeSet) : CardView(context, attrs
         image?.setImageResource(value)
     }
 
-    fun getAction1Drawable(): Drawable? = actionButton1?.drawable
+    fun getActionButton1Drawable(): Drawable? = actionButton1?.drawable
 
-    private fun setAction1Drawable(@DrawableRes drawableRes: Int?) {
+    private fun setActionButton1Drawable(@DrawableRes drawableRes: Int?) {
         actionButton1?.hideIf(drawableRes.toString().isBlank())
         drawableRes?.let { actionButton1?.setImageResource(drawableRes) }
     }
 
-    fun getAction2Drawable(): Drawable? = actionButton2?.drawable
+    fun getActionButton2Drawable(): Drawable? = actionButton2?.drawable
 
-    private fun setAction2Drawable(@DrawableRes drawableRes: Int?) {
+    private fun setActionButton2Drawable(@DrawableRes drawableRes: Int?) {
         actionButton2?.hideIf(drawableRes.toString().isBlank())
         drawableRes?.let { actionButton2?.setImageResource(drawableRes) }
     }
 
-    fun getAction3Drawable(): Drawable? = actionButton3?.drawable
+    fun getActionButton3Drawable(): Drawable? = actionButton3?.drawable
 
-    private fun setAction3Drawable(@DrawableRes drawableRes: Int?) {
+    private fun setActionButton3Drawable(@DrawableRes drawableRes: Int?) {
         actionButton3?.hideIf(drawableRes.toString().isBlank())
         drawableRes?.let { actionButton3?.setImageResource(drawableRes) }
     }
