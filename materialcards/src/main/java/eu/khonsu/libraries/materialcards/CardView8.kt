@@ -12,15 +12,16 @@ import androidx.cardview.widget.CardView
 import eu.khonsu.libraries.materialcards.extensions.hideIf
 
 /**
- * Avatar, media 16:9, supporting text and action buttons.
+ * Media 1x, primary text, subtext, supporting text and actions.
  *
- * @see [](http://eugenebrusov.com/cardview-with-constraintlayout/)
+ * @see [](http://eugenebrusov.com/using-of-constraintlayout-to-build-out-cardview-3-of-3/)
  */
 @Suppress("MemberVisibilityCanBePrivate", "unused")
 class CardView8(context: Context, attrs: AttributeSet) : CardView(context, attrs) {
 
     var title: TextView? = null
     var subtitle: TextView? = null
+    var supportingText: TextView? = null
     var image: ImageView? = null
     var actionButton1: Button? = null
     var actionButton2: Button? = null
@@ -31,6 +32,7 @@ class CardView8(context: Context, attrs: AttributeSet) : CardView(context, attrs
         initComponents()
         setTitleText("")
         setSubtitleText("")
+        setSupportingText("")
         setAction1Text("")
         setAction2Text("")
         setAction3Text("")
@@ -39,6 +41,9 @@ class CardView8(context: Context, attrs: AttributeSet) : CardView(context, attrs
             when (val attr = typedArray.getIndex(index)) {
                 R.styleable.CardView8_cv8_title -> setTitleText(typedArray.getString(attr))
                 R.styleable.CardView8_cv8_subtitle -> setSubtitleText(typedArray.getString(attr))
+                R.styleable.CardView8_cv8_supporting_text -> setSupportingText(
+                    typedArray.getString(attr)
+                )
                 R.styleable.CardView8_cv8_srcImage -> setImageSrc(
                     typedArray.getResourceId(attr, R.drawable.background_image)
                 )
@@ -59,7 +64,8 @@ class CardView8(context: Context, attrs: AttributeSet) : CardView(context, attrs
     private fun initComponents() {
         title = findViewById(R.id.title)
         subtitle = findViewById(R.id.subtitle)
-        image = findViewById(R.id.media_image)
+        supportingText = findViewById(R.id.supporting_text)
+        image = findViewById(R.id.image)
         actionButton1 = findViewById(R.id.action_button_1)
         actionButton2 = findViewById(R.id.action_button_2)
         actionButton3 = findViewById(R.id.action_button_3)
@@ -76,6 +82,13 @@ class CardView8(context: Context, attrs: AttributeSet) : CardView(context, attrs
     fun setSubtitleText(value: CharSequence?) {
         subtitle?.hideIf(value.isNullOrBlank())
         subtitle?.text = value
+    }
+
+    fun getSupportingText(): CharSequence? = supportingText?.text
+
+    fun setSupportingText(value: CharSequence?) {
+        supportingText?.hideIf(value.isNullOrBlank())
+        supportingText?.text = value
     }
 
     fun getImageSrc(): Drawable? = image?.drawable

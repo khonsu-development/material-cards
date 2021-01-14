@@ -6,6 +6,7 @@
     <string name="title_8">Card View 8</string>
     <string name="subtitle">This is the subtitle for this card view</string>
     <string name="supporting_text">This is the supporting text for this card view.</string>
+    <string name="supporting_text_long">This is the supporting text for this card view. This is the supporting text for this card view. This is the supporting text for this card view. This is the supporting text for this card view. This is the supporting text for this card view.</string>
     <string name="action_1">Action 1</string>
     <string name="action_2">Action 2</string>
     <string name="action_3">Action 3</string>
