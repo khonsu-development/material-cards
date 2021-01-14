@@ -25,6 +25,7 @@
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/action_button_1"
+            style="@style/Widget.AppCompat.ActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -35,6 +36,7 @@
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/action_button_2"
+            style="@style/Widget.AppCompat.ActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -45,6 +47,7 @@
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/action_button_3"
+            style="@style/Widget.AppCompat.ActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
