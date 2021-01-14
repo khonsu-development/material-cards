@@ -18,6 +18,7 @@
         <attr name="cv2_supplementalAction3Drawable" format="reference" />
     </declare-styleable>
     <declare-styleable name="CardView4">
+        <attr name="cv4_srcImage" format="reference" />
         <attr name="cv4_title" format="string" localization="suggested" />
         <attr name="cv4_subtitle" format="string" localization="suggested" />
         <attr name="cv4_supportingText" format="string" localization="suggested" />
