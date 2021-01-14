@@ -85,7 +85,7 @@ class CardView2(context: Context, attrs: AttributeSet) : CardView(context, attrs
         avatarImage = findViewById(R.id.avatar_image)
         title = findViewById(R.id.title)
         subtitle = findViewById(R.id.subtitle)
-        image = findViewById(R.id.media_image)
+        image = findViewById(R.id.image)
         supportingText = findViewById(R.id.supporting_text)
         actionButton1 = findViewById(R.id.action_button_1)
         actionButton2 = findViewById(R.id.action_button_2)

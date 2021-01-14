@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.View
 import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.annotation.DrawableRes
 import androidx.cardview.widget.CardView
 import eu.khonsu.libraries.materialcards.extensions.hideIf
@@ -17,6 +18,7 @@ import eu.khonsu.libraries.materialcards.extensions.hideIf
 @Suppress("MemberVisibilityCanBePrivate", "unused")
 class CardView6(context: Context, attrs: AttributeSet) : CardView(context, attrs) {
 
+    var image: ImageView? = null
     var actionButton1: ImageButton? = null
     var actionButton2: ImageButton? = null
     var actionButton3: ImageButton? = null
@@ -30,6 +32,9 @@ class CardView6(context: Context, attrs: AttributeSet) : CardView(context, attrs
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CardView6)
         for (index in 0 until typedArray.indexCount) {
             when (val attr = typedArray.getIndex(index)) {
+                R.styleable.CardView7_cv7_srcImage -> setImageSrc(
+                    typedArray.getResourceId(attr, R.drawable.background_image)
+                )
                 R.styleable.CardView6_cv6_action1Drawable -> setAction1Drawable(
                     typedArray.getResourceId(attr, R.drawable.ic_star_outline)
                 )
@@ -45,9 +50,16 @@ class CardView6(context: Context, attrs: AttributeSet) : CardView(context, attrs
     }
 
     private fun initComponents() {
+        image = findViewById(R.id.image)
         actionButton1 = findViewById(R.id.action_button_1)
         actionButton2 = findViewById(R.id.action_button_2)
-        actionButton2 = findViewById(R.id.action_button_3)
+        actionButton3 = findViewById(R.id.action_button_3)
+    }
+
+    fun getImageSrc(): Drawable? = image?.drawable
+
+    fun setImageSrc(@DrawableRes value: Int) {
+        image?.setImageResource(value)
     }
 
     fun getAction1Drawable(): Drawable? = actionButton1?.drawable
