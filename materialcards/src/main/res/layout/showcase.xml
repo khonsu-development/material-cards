@@ -5,6 +5,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <eu.khonsu.libraries.materialcards.CardView1
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/big_padding"
+        app:cv1_srcImage="@drawable/background_image"
+        app:cv1_supportingText="@string/supporting_text_long" />
+
     <eu.khonsu.libraries.materialcards.CardView2
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

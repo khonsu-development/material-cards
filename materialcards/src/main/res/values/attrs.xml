@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="CardView1">
+        <attr name="cv1_srcImage" format="reference" />
+        <attr name="cv1_supportingText" format="string" localization="suggested" />
+    </declare-styleable>
     <declare-styleable name="CardView2">
         <attr name="cv2_avatarImage" format="reference" />
         <attr name="cv2_srcImage" format="reference" />
