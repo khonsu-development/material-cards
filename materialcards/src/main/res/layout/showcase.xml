@@ -92,4 +92,13 @@
         app:cv10_supporting_text="@string/supporting_text"
         app:cv10_title="@string/title_10" />
 
+    <eu.khonsu.libraries.materialcards.CardView11
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/big_padding"
+        app:cv11_action1Drawable="@drawable/ic_star_outline"
+        app:cv11_action2Drawable="@drawable/ic_star_outline"
+        app:cv11_action3Drawable="@drawable/ic_star_outline"
+        app:cv11_srcImage="@drawable/background_image" />
+
 </LinearLayout>

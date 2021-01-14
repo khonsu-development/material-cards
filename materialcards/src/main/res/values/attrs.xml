@@ -66,4 +66,10 @@
         <attr name="cv10_action2Text" format="string" localization="suggested" />
         <attr name="cv10_action3Text" format="string" localization="suggested" />
     </declare-styleable>
+    <declare-styleable name="CardView11">
+        <attr name="cv11_srcImage" format="reference" />
+        <attr name="cv11_action1Drawable" format="reference" />
+        <attr name="cv11_action2Drawable" format="reference" />
+        <attr name="cv11_action3Drawable" format="reference" />
+    </declare-styleable>
 </resources>
