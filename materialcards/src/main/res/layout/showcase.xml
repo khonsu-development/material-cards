@@ -18,7 +18,7 @@
         app:cv2_supplementalAction1Drawable="@drawable/ic_star_outline"
         app:cv2_supplementalAction2Drawable="@drawable/ic_star_outline"
         app:cv2_supplementalAction3Drawable="@drawable/ic_star_outline"
-        app:cv2_supportingText="@string/supporting_text"
+        app:cv2_supportingText="@string/supporting_text_long"
         app:cv2_title="@string/title_2" />
 
     <eu.khonsu.libraries.materialcards.CardView5
@@ -65,5 +65,19 @@
         app:cv8_action3Text="@string/action_3"
         app:cv8_srcImage="@drawable/background_image"
         app:cv8_subtitle="@string/subtitle"
+        app:cv8_supporting_text="@string/supporting_text_long"
         app:cv8_title="@string/title_8" />
+
+    <eu.khonsu.libraries.materialcards.CardView9
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/big_padding"
+        app:cv9_action1Text="@string/action_1"
+        app:cv9_action2Text="@string/action_2"
+        app:cv9_action3Text="@string/action_3"
+        app:cv9_srcImage="@drawable/background_image"
+        app:cv9_subtitle="@string/subtitle"
+        app:cv9_supporting_text="@string/supporting_text"
+        app:cv9_title="@string/title_9" />
+
 </LinearLayout>
