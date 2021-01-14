@@ -5,6 +5,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <eu.khonsu.libraries.materialcards.CardView4
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/big_padding"
+        app:cv4_action1Text="@string/action_1"
+        app:cv4_action2Text="@string/action_2"
+        app:cv4_action3Text="@string/action_3"
+        app:cv4_srcImage="@drawable/background_image"
+        app:cv4_subtitle="@string/subtitle"
+        app:cv4_supportingText="@string/supporting_text_long"
+        app:cv4_title="@string/title_4" />
+
     <eu.khonsu.libraries.materialcards.CardView1
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

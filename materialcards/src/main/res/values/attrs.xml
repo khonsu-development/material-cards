@@ -17,6 +17,14 @@
         <attr name="cv2_supplementalAction2Drawable" format="reference" />
         <attr name="cv2_supplementalAction3Drawable" format="reference" />
     </declare-styleable>
+    <declare-styleable name="CardView4">
+        <attr name="cv4_title" format="string" localization="suggested" />
+        <attr name="cv4_subtitle" format="string" localization="suggested" />
+        <attr name="cv4_supportingText" format="string" localization="suggested" />
+        <attr name="cv4_action1Text" format="string" localization="suggested" />
+        <attr name="cv4_action2Text" format="string" localization="suggested" />
+        <attr name="cv4_action3Text" format="string" localization="suggested" />
+    </declare-styleable>
     <declare-styleable name="CardView5">
         <attr name="cv5_title" format="string" localization="suggested" />
         <attr name="cv5_subtitle" format="string" localization="suggested" />

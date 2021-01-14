@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="title_2">Card View 2</string>
+    <string name="title_4">Card View 4</string>
     <string name="title_5">Card View 5</string>
     <string name="title_7">Card View 7</string>
     <string name="title_8">Card View 8</string>
