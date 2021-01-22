@@ -5,10 +5,12 @@ import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.cardview.widget.CardView
+import at.blogc.android.views.ExpandableTextView
 import eu.khonsu.libraries.materialcards.extensions.hideIf
 
 /**
@@ -22,7 +24,8 @@ class CardView4(context: Context, attrs: AttributeSet) : CardView(context, attrs
     var image: ImageView? = null
     var title: TextView? = null
     var subtitle: TextView? = null
-    var supportingText: TextView? = null
+    var supportingText: ExpandableTextView? = null
+    var expandButton: ImageButton? = null
     var actionButton1: Button? = null
     var actionButton2: Button? = null
     var actionButton3: Button? = null
@@ -32,9 +35,14 @@ class CardView4(context: Context, attrs: AttributeSet) : CardView(context, attrs
         initComponents()
         setTitleText("")
         setSubtitleText("")
+        setSupportingText("")
         setAction1Text("")
         setAction2Text("")
         setAction3Text("")
+        expandButton?.setOnClickListener {
+            expandButton?.setBackgroundResource(if (supportingText?.isExpanded == true) R.drawable.ic_expand_less else R.drawable.ic_expand_more)
+            supportingText?.toggle()
+        }
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CardView4)
         for (index in 0 until typedArray.indexCount) {
             when (val attr = typedArray.getIndex(index)) {
@@ -65,6 +73,7 @@ class CardView4(context: Context, attrs: AttributeSet) : CardView(context, attrs
         title = findViewById(R.id.title)
         subtitle = findViewById(R.id.subtitle)
         supportingText = findViewById(R.id.supporting_text)
+        expandButton = findViewById(R.id.expand_button)
         actionButton1 = findViewById(R.id.action_button_1)
         actionButton2 = findViewById(R.id.action_button_2)
         actionButton3 = findViewById(R.id.action_button_3)
