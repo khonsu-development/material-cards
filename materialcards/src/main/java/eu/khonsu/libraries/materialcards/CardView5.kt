@@ -33,6 +33,7 @@ class CardView5(context: Context, attrs: AttributeSet) : CardView(context, attrs
         initComponents()
         setTitleText("")
         setSubtitleText("")
+        setSupportingText("")
         setAction1Text("")
         setAction2Text("")
         setSupplementalAction1Drawable(0)

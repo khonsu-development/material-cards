@@ -32,6 +32,8 @@ class CardView7(context: Context, attrs: AttributeSet) : CardView(context, attrs
     private fun init(context: Context, attrs: AttributeSet) {
         View.inflate(context, R.layout.card_view_7, this)
         initComponents()
+        setTitleText("")
+        setSubtitleText("")
         setAction1Text("")
         setAction2Text("")
         setSupplementalAction1Drawable(0)
