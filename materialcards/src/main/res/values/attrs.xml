@@ -85,4 +85,9 @@
         <attr name="cv11_action2Drawable" format="reference" />
         <attr name="cv11_action3Drawable" format="reference" />
     </declare-styleable>
+    <declare-styleable name="CardView12">
+        <attr name="cv12_title" format="string" localization="suggested" />
+        <attr name="cv12_subtitle" format="string" localization="suggested" />
+        <attr name="cv12_supportingText" format="string" localization="suggested" />
+    </declare-styleable>
 </resources>
