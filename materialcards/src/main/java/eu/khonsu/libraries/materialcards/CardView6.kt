@@ -65,21 +65,21 @@ class CardView6(context: Context, attrs: AttributeSet) : CardView(context, attrs
     fun getActionButton1Drawable(): Drawable? = actionButton1?.drawable
 
     private fun setActionButton1Drawable(@DrawableRes drawableRes: Int?) {
-        actionButton1?.hideIf(drawableRes.toString().isBlank())
+        actionButton1?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
         drawableRes?.let { actionButton1?.setImageResource(drawableRes) }
     }
 
     fun getActionButton2Drawable(): Drawable? = actionButton2?.drawable
 
     private fun setActionButton2Drawable(@DrawableRes drawableRes: Int?) {
-        actionButton2?.hideIf(drawableRes.toString().isBlank())
+        actionButton2?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
         drawableRes?.let { actionButton2?.setImageResource(drawableRes) }
     }
 
     fun getActionButton3Drawable(): Drawable? = actionButton3?.drawable
 
     private fun setActionButton3Drawable(@DrawableRes drawableRes: Int?) {
-        actionButton3?.hideIf(drawableRes.toString().isBlank())
+        actionButton3?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
         drawableRes?.let { actionButton3?.setImageResource(drawableRes) }
     }
 

@@ -68,7 +68,7 @@ class CardView7(context: Context, attrs: AttributeSet) : CardView(context, attrs
         title = findViewById(R.id.title)
         subtitle = findViewById(R.id.subtitle)
         action1 = findViewById(R.id.action_button_1)
-        action2 = findViewById(R.id.action2)
+        action2 = findViewById(R.id.action_button_2)
         supplementalAction1 = findViewById(R.id.supplemental_action_1)
         supplementalAction2 = findViewById(R.id.supplemental_action_2)
         supplementalAction3 = findViewById(R.id.supplemental_action_3)
@@ -95,6 +95,7 @@ class CardView7(context: Context, attrs: AttributeSet) : CardView(context, attrs
     fun getAction1Text(): CharSequence? = action1?.text
 
     fun setAction1Text(value: CharSequence?) {
+        action1?.hideIf(value.toString().isBlank())
         action1?.text = value
     }
 
@@ -108,21 +109,21 @@ class CardView7(context: Context, attrs: AttributeSet) : CardView(context, attrs
     fun getSupplementalAction1Drawable(): Drawable? = supplementalAction1?.drawable
 
     private fun setSupplementalAction1Drawable(@DrawableRes drawableRes: Int?) {
-        supplementalAction1?.hideIf(drawableRes.toString().isBlank())
+        supplementalAction1?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
         drawableRes?.let { supplementalAction1?.setImageResource(drawableRes) }
     }
 
     fun getSupplementalAction2Drawable(): Drawable? = supplementalAction2?.drawable
 
     private fun setSupplementalAction2Drawable(@DrawableRes drawableRes: Int?) {
-        supplementalAction2?.hideIf(drawableRes.toString().isBlank())
+        supplementalAction2?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
         drawableRes?.let { supplementalAction2?.setImageResource(drawableRes) }
     }
 
     fun getSupplementalAction3Drawable(): Drawable? = supplementalAction3?.drawable
 
     private fun setSupplementalAction3Drawable(@DrawableRes drawableRes: Int?) {
-        supplementalAction3?.hideIf(drawableRes.toString().isBlank())
+        supplementalAction3?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
         drawableRes?.let { supplementalAction3?.setImageResource(drawableRes) }
     }
 

@@ -9,14 +9,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <eu.khonsu.libraries.materialcards.CardView12
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/big_padding"
-            app:cv12_subtitle="@string/subtitle"
-            app:cv12_supportingText="@string/supporting_text"
-            app:cv12_title="@string/title_12" />
-
         <eu.khonsu.libraries.materialcards.CardView1
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -131,6 +123,14 @@
             app:cv11_action2Drawable="@drawable/ic_star_outline"
             app:cv11_action3Drawable="@drawable/ic_star_outline"
             app:cv11_srcImage="@drawable/background_image" />
+
+        <eu.khonsu.libraries.materialcards.CardView12
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/big_padding"
+            app:cv12_subtitle="@string/subtitle"
+            app:cv12_supportingText="@string/supporting_text"
+            app:cv12_title="@string/title_12" />
 
     </LinearLayout>
 </ScrollView>

@@ -100,6 +100,7 @@ class CardView10(context: Context, attrs: AttributeSet) : CardView(context, attr
     fun getAction1Text(): CharSequence? = actionButton1?.text
 
     fun setAction1Text(value: CharSequence?) {
+        actionButton1?.hideIf(value.toString().isBlank())
         actionButton1?.text = value
     }
 
