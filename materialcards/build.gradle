@@ -2,7 +2,6 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'maven'
-apply plugin: 'maven-publish'
 
 group = 'eu.khonsu.libraries'
 version = '1.0'
@@ -61,6 +60,8 @@ task ktlintFormat(type: JavaExec, group: "formatting") {
     args "-F", "src/**/*.kt"
 }
 
+//apply plugin: 'maven-publish'
+//
 //uploadArchives {
 //    repositories {
 //        mavenDeployer {
