@@ -2,9 +2,10 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'maven'
+apply plugin: 'maven-publish'
 
 group = 'eu.khonsu.libraries'
-version = '1.2'
+version = '1.0'
 
 android {
     compileSdkVersion 30
@@ -61,4 +62,12 @@ task ktlintFormat(type: JavaExec, group: "formatting") {
     classpath = configurations.ktlint
     main = "com.pinterest.ktlint.Main"
     args "-F", "src/**/*.kt"
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: mavenLocal().getUrl())
+        }
+    }
 }
