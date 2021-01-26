@@ -53,7 +53,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_expand_more" />
 
-        <at.blogc.android.views.ExpandableTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/supporting_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -61,11 +61,9 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
             android:lineSpacingExtra="8dp"
-            android:text="@string/supporting_text_long"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/text_color"
             android:visibility="gone"
-            app:animation_duration="750"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

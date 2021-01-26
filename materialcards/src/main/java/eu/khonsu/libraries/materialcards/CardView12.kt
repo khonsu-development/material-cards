@@ -6,8 +6,9 @@ import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import at.blogc.android.views.ExpandableTextView
+import eu.khonsu.libraries.materialcards.extensions.hide
 import eu.khonsu.libraries.materialcards.extensions.hideIf
+import eu.khonsu.libraries.materialcards.extensions.show
 
 /**
  * Primary text, subtext, supporting text and expand button.
@@ -17,7 +18,7 @@ class CardView12(context: Context, attrs: AttributeSet) : CardView(context, attr
 
     var title: TextView? = null
     var subtitle: TextView? = null
-    var supportingText: ExpandableTextView? = null
+    var supportingText: TextView? = null
     var expandButton: ImageButton? = null
 
     private fun init(context: Context, attrs: AttributeSet) {
@@ -27,8 +28,13 @@ class CardView12(context: Context, attrs: AttributeSet) : CardView(context, attr
         setSubtitleText("")
         setSupportingText("")
         expandButton?.setOnClickListener {
-            expandButton?.setBackgroundResource(if (supportingText?.isExpanded == true) R.drawable.ic_expand_less else R.drawable.ic_expand_more)
-            supportingText?.toggle()
+            if (supportingText?.visibility == View.VISIBLE) {
+                supportingText?.hide()
+                expandButton?.setImageResource(R.drawable.ic_expand_more)
+            } else {
+                supportingText?.show()
+                expandButton?.setImageResource(R.drawable.ic_expand_less)
+            }
         }
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CardView12)
         for (index in 0 until typedArray.indexCount) {
@@ -41,6 +47,8 @@ class CardView12(context: Context, attrs: AttributeSet) : CardView(context, attr
             }
         }
         typedArray.recycle()
+        supportingText?.hide()
+        expandButton?.setImageResource(R.drawable.ic_expand_more)
     }
 
     private fun initComponents() {
