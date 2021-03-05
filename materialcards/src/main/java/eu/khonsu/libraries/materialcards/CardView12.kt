@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import eu.khonsu.libraries.materialcards.extensions.hide
 import eu.khonsu.libraries.materialcards.extensions.hideIf
 import eu.khonsu.libraries.materialcards.extensions.show
@@ -16,6 +17,7 @@ import eu.khonsu.libraries.materialcards.extensions.show
 @Suppress("MemberVisibilityCanBePrivate", "unused")
 class CardView12(context: Context, attrs: AttributeSet) : CardView(context, attrs) {
 
+    var constraintLayout: ConstraintLayout? = null
     var title: TextView? = null
     var subtitle: TextView? = null
     var supportingText: TextView? = null
@@ -52,6 +54,7 @@ class CardView12(context: Context, attrs: AttributeSet) : CardView(context, attr
     }
 
     private fun initComponents() {
+        constraintLayout = findViewById(R.id.constraint_layout)
         title = findViewById(R.id.title)
         subtitle = findViewById(R.id.subtitle)
         supportingText = findViewById(R.id.supporting_text)

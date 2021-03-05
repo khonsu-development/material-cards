@@ -8,6 +8,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.annotation.DrawableRes
 import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import eu.khonsu.libraries.materialcards.extensions.hideIf
 
 /**
@@ -18,6 +19,7 @@ import eu.khonsu.libraries.materialcards.extensions.hideIf
 @Suppress("MemberVisibilityCanBePrivate", "unused")
 class CardView11(context: Context, attrs: AttributeSet) : CardView(context, attrs) {
 
+    var constraintLayout: ConstraintLayout? = null
     var image: ImageView? = null
     var actionButton1: ImageButton? = null
     var actionButton2: ImageButton? = null
@@ -50,6 +52,7 @@ class CardView11(context: Context, attrs: AttributeSet) : CardView(context, attr
     }
 
     private fun initComponents() {
+        constraintLayout = findViewById(R.id.constraint_layout)
         image = findViewById(R.id.image)
         actionButton1 = findViewById(R.id.action_button_1)
         actionButton2 = findViewById(R.id.action_button_2)
