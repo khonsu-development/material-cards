@@ -2,6 +2,7 @@
 <resources>
     <dimen name="icon_default_viewport">24</dimen>
     <dimen name="icon_default_size">24dp</dimen>
+    <dimen name="image_default_size">80dp</dimen>
     <dimen name="big_padding">16dp</dimen>
     <dimen name="line_spacing_extra">4dp</dimen>
 </resources>

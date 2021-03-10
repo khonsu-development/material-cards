@@ -66,6 +66,8 @@
         <attr name="cv8b_subtitle" format="string" localization="suggested" />
         <attr name="cv8b_supportingText" format="string" localization="suggested" />
         <attr name="cv8b_srcImage" format="reference" />
+        <attr name="cv8b_imageHeight" format="dimension" />
+        <attr name="cv8b_imageWidth" format="dimension" />
         <attr name="cv8b_action1Text" format="string" localization="suggested" />
         <attr name="cv8b_action2Text" format="string" localization="suggested" />
         <attr name="cv8b_action3Text" format="string" localization="suggested" />
