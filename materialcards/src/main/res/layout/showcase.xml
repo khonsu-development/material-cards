@@ -86,6 +86,8 @@
             app:cv8_action1Text="@string/action_1"
             app:cv8_action2Text="@string/action_2"
             app:cv8_action3Text="@string/action_3"
+            app:cv8_imageHeight="@dimen/image_default_size"
+            app:cv8_imageWidth="@dimen/image_default_size"
             app:cv8_srcImage="@drawable/background_image"
             app:cv8_subtitle="@string/subtitle"
             app:cv8_supportingText="@string/supporting_text_long"

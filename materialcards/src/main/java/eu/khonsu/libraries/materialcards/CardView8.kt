@@ -49,6 +49,18 @@ class CardView8(context: Context, attrs: AttributeSet) : CardView(context, attrs
                 R.styleable.CardView8_cv8_srcImage -> setImageSrc(
                     typedArray.getResourceId(attr, R.drawable.background_image)
                 )
+                R.styleable.CardView8b_cv8b_imageHeight -> setImageHeight(
+                    typedArray.getDimensionPixelSize(
+                        attr,
+                        resources.getDimensionPixelSize(R.dimen.image_default_size)
+                    )
+                )
+                R.styleable.CardView8b_cv8b_imageWidth -> setImageWidth(
+                    typedArray.getDimensionPixelSize(
+                        attr,
+                        resources.getDimensionPixelSize(R.dimen.image_default_size)
+                    )
+                )
                 R.styleable.CardView8_cv8_action1Text -> setAction1Text(
                     typedArray.getString(attr)
                 )
@@ -98,6 +110,18 @@ class CardView8(context: Context, attrs: AttributeSet) : CardView(context, attrs
 
     fun setImageSrc(@DrawableRes value: Int) {
         image?.setImageResource(value)
+    }
+
+    fun getImageHeight(): Int? = image?.height
+
+    fun setImageHeight(value: Int) {
+        image?.layoutParams?.height = value
+    }
+
+    fun getImageWidth(): Int? = image?.width
+
+    fun setImageWidth(value: Int) {
+        image?.layoutParams?.width = value
     }
 
     fun getAction1Text(): CharSequence? = actionButton1?.text

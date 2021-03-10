@@ -57,6 +57,8 @@
         <attr name="cv8_subtitle" format="string" localization="suggested" />
         <attr name="cv8_supportingText" format="string" localization="suggested" />
         <attr name="cv8_srcImage" format="reference" />
+        <attr name="cv8_imageHeight" format="dimension" />
+        <attr name="cv8_imageWidth" format="dimension" />
         <attr name="cv8_action1Text" format="string" localization="suggested" />
         <attr name="cv8_action2Text" format="string" localization="suggested" />
         <attr name="cv8_action3Text" format="string" localization="suggested" />
