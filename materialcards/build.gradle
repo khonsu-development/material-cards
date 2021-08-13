@@ -29,7 +29,7 @@ configurations {
 
 dependencies {
     // Linting
-    ktlint 'com.pinterest:ktlint:0.42.0'
+    ktlint 'com.pinterest:ktlint:0.42.1'
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
