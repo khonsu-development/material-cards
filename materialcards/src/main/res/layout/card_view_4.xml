@@ -3,10 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_view"
-    style="@style/CardView.Light"
+    style="@style/CardView"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/white">
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_layout"
@@ -34,7 +33,6 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            android:textColor="@color/text_color"
             app:layout_constraintBottom_toTopOf="@+id/subtitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +47,6 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="@color/text_color_light"
             app:layout_constraintBottom_toTopOf="@+id/action_button_1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -104,7 +101,6 @@
             android:layout_marginBottom="24dp"
             android:lineSpacingExtra="8dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="@color/text_color"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

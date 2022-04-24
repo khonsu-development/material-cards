@@ -3,10 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_view"
-    style="@style/CardView.Light"
+    style="@style/CardView"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/white">
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_layout"
@@ -30,7 +29,6 @@
             style="@style/Widget.AppCompat.ActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:padding="12dp"
             app:layout_constraintEnd_toStartOf="@+id/action_button_2"
             app:layout_constraintTop_toTopOf="@+id/action_button_2"
@@ -41,7 +39,6 @@
             style="@style/Widget.AppCompat.ActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:padding="12dp"
             app:layout_constraintEnd_toStartOf="@+id/action_button_3"
             app:layout_constraintTop_toTopOf="@+id/action_button_3"
@@ -53,7 +50,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:background="@color/white"
             android:padding="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
