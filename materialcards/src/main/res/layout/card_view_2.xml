@@ -66,7 +66,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/avatar_image"
-            app:srcCompat="@drawable/background_image" />
+            tools:src="@drawable/background_image" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/supporting_text"

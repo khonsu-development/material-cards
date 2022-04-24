@@ -24,7 +24,7 @@
             app:layout_constraintEnd_toStartOf="@id/title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/title"
-            app:srcCompat="@drawable/background_image" />
+            tools:src="@drawable/background_image" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/title"
