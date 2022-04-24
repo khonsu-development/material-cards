@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_view"
     style="@style/CardView.Light"
     android:layout_width="match_parent"
@@ -37,7 +38,8 @@
             app:layout_constraintBottom_toTopOf="@+id/subtitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image" />
+            app:layout_constraintTop_toBottomOf="@+id/image"
+            tools:text="@string/title_4" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/subtitle"
@@ -51,7 +53,8 @@
             app:layout_constraintBottom_toTopOf="@+id/action_button_1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title" />
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:text="@string/subtitle" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/action_button_1"
@@ -62,10 +65,10 @@
             android:minWidth="0dp"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
-            android:text="@android:string/ok"
             app:layout_constraintBottom_toTopOf="@+id/supporting_text"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/subtitle" />
+            app:layout_constraintTop_toBottomOf="@+id/subtitle"
+            tools:text="@android:string/ok" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/action_button_2"
@@ -76,9 +79,9 @@
             android:minWidth="0dp"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
-            android:text="@android:string/cancel"
             app:layout_constraintStart_toEndOf="@+id/action_button_1"
-            app:layout_constraintTop_toTopOf="@+id/action_button_1" />
+            app:layout_constraintTop_toTopOf="@+id/action_button_1"
+            tools:text="@android:string/cancel" />
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/expand_button"
@@ -106,7 +109,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/action_button_1" />
+            app:layout_constraintTop_toBottomOf="@+id/action_button_1"
+            tools:text="@string/supporting_text_long" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

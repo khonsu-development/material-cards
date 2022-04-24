@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_view"
     style="@style/CardView.Light"
     android:layout_width="match_parent"
@@ -46,12 +47,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:text=""
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/subtitle"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/title_7" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/subtitle"
@@ -64,7 +65,8 @@
             android:textColor="@color/transparent_white"
             app:layout_constraintBottom_toTopOf="@+id/action_button_1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/subtitle" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/action_button_1"
@@ -75,10 +77,10 @@
             android:minWidth="0dp"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
-            android:text="@android:string/ok"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@android:string/ok" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/action_button_2"
@@ -89,10 +91,10 @@
             android:minWidth="0dp"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
-            android:text="@android:string/cancel"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/action_button_1" />
+            app:layout_constraintStart_toEndOf="@id/action_button_1"
+            tools:text="@android:string/cancel" />
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/supplemental_action_1"
