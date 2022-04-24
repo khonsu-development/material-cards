@@ -8,12 +8,12 @@ group = "eu.khonsu.libraries"
 version = "1.0"
 
 android {
-    compileSdk = 30
+    compileSdk = 31
     buildToolsVersion = "30.0.3"
 
     defaultConfig {
         minSdk = 21
-        targetSdk = 30
+        targetSdk = 31
         vectorDrawables.useSupportLibrary = true
     }
 }
