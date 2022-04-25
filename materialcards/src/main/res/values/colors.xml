@@ -7,9 +7,4 @@
 
     <color name="transparent_white">#B3FFFFFF</color>
     <color name="transparent_dark_gray">#9F000000</color>
-
-    <!-- Light/Dark styling -->
-
-    <color name="default_icon_color">@color/black</color>
-    <color name="default_subtitle_text_color">@color/dark_gray</color>
 </resources>
