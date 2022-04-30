@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="materialcards/src/main/res/drawable/background_image.xml" value="0.1625" />
+        <entry key="materialcards/src/main/res/drawable/ic_avatar.xml" value="0.1625" />
+        <entry key="materialcards/src/main/res/drawable/ic_expand_less.xml" value="0.1625" />
+        <entry key="materialcards/src/main/res/drawable/ic_expand_more.xml" value="0.1625" />
+        <entry key="materialcards/src/main/res/drawable/ic_star_outline.xml" value="0.1625" />
+        <entry key="materialcards/src/main/res/drawable/ic_star_outline_white.xml" value="0.1625" />
         <entry key="materialcards/src/main/res/layout/card_view_1.xml" value="0.30625" />
         <entry key="materialcards/src/main/res/layout/card_view_10.xml" value="0.30625" />
         <entry key="materialcards/src/main/res/layout/card_view_11.xml" value="0.30625" />

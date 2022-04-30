@@ -1,11 +1,13 @@
 plugins {
+    kotlin("android")
     id("com.android.library")
     id("kotlin-android")
     id("org.jlleitschuh.gradle.ktlint") version "10.2.1"
+    id("maven-publish")
 }
 
 group = "eu.khonsu.libraries"
-version = "1.0"
+version = "1.0-SNAPSHOT"
 
 android {
     compileSdk = 31
@@ -16,7 +18,37 @@ android {
         targetSdk = 31
         vectorDrawables.useSupportLibrary = true
     }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
+
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
+
+// afterEvaluate {
+//     publishing {
+//         publications {
+//             // Creates a Maven publication called "release".
+//             create<MavenPublication>("release") {
+//                 // Applies the component for the release build variant.
+//                 from(components["release"])
+//
+//                 // You can then customize attributes of the publication as shown below.
+//                 groupId = "eu.khonsu.libraries"
+//                 artifactId = "material-cards"
+//                 version = "1.0-SNAPSHOT"
+//             }
+//         }
+//     }
+// }
 
 configurations {
     compileOnly {
