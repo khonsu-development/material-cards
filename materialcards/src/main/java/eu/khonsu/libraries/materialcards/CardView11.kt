@@ -38,13 +38,13 @@ class CardView11(context: Context, attrs: AttributeSet) : CardView(context, attr
                     typedArray.getResourceId(attr, R.drawable.background_image)
                 )
                 R.styleable.CardView11_cv11_action1Drawable -> setActionButton1Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline_white)
+                    typedArray.getResourceId(attr, R.drawable.ic_star_outline)
                 )
                 R.styleable.CardView11_cv11_action2Drawable -> setActionButton2Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline_white)
+                    typedArray.getResourceId(attr, R.drawable.ic_star_outline)
                 )
                 R.styleable.CardView11_cv11_action3Drawable -> setActionButton3Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline_white)
+                    typedArray.getResourceId(attr, R.drawable.ic_star_outline)
                 )
             }
         }
