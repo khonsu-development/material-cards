@@ -45,7 +45,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="0dp"
             android:padding="6dp"
-            android:tint="?attr/colorControlNormal"
+            android:tint="?attr/colorControlHighlight"
             app:layout_constraintBottom_toBottomOf="@id/subtitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/title"
