@@ -74,9 +74,9 @@
             app:cv7_action2Text="@string/action_2"
             app:cv7_srcImage="@drawable/background_image"
             app:cv7_subtitle="@string/subtitle"
-            app:cv7_supplementalAction1Drawable="@drawable/ic_star_outline_white"
-            app:cv7_supplementalAction2Drawable="@drawable/ic_star_outline_white"
-            app:cv7_supplementalAction3Drawable="@drawable/ic_star_outline_white"
+            app:cv7_supplementalAction1Drawable="@drawable/ic_star_outline"
+            app:cv7_supplementalAction2Drawable="@drawable/ic_star_outline"
+            app:cv7_supplementalAction3Drawable="@drawable/ic_star_outline"
             app:cv7_title="@string/title_7" />
 
         <eu.khonsu.libraries.materialcards.CardView8
