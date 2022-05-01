@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "eu.khonsu.libraries"
-version = "1.0"
+version = "1.0-SNAPSHOT"
 
 android {
     compileSdk = 31
@@ -36,4 +36,18 @@ dependencies {
     // Design elements
     implementation("androidx.constraintlayout:constraintlayout:2.1.3")
     implementation("com.google.android.material:material:1.5.0")
+}
+
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = project.group as String
+            artifactId = "material-cards"
+            version = project.version as String
+
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
 }
