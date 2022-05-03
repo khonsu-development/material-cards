@@ -1,15 +1,19 @@
 package eu.khonsu.libraries.materialcards
 
 import android.content.Context
+import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
+import androidx.core.widget.ImageViewCompat
 import eu.khonsu.libraries.materialcards.extensions.hideIf
 
 /**
@@ -48,6 +52,9 @@ class CardView8(context: Context, attrs: AttributeSet) : CardView(context, attrs
                 )
                 R.styleable.CardView8_cv8_srcImage -> setImageSrc(
                     typedArray.getResourceId(attr, R.drawable.background_image)
+                )
+                R.styleable.CardView8_cv8_srcImageTint -> setSrcDrawableTint(
+                    typedArray.getResourceId(attr, R.attr.colorControlHighlight)
                 )
                 R.styleable.CardView8b_cv8b_imageHeight -> setImageHeight(
                     typedArray.getDimensionPixelSize(
@@ -110,6 +117,19 @@ class CardView8(context: Context, attrs: AttributeSet) : CardView(context, attrs
 
     fun setImageSrc(@DrawableRes value: Int) {
         image?.setImageResource(value)
+    }
+
+    fun getSrcDrawableTint(): ColorStateList? = image?.imageTintList
+
+    fun setSrcDrawableTint(@ColorRes tintRes: Int?) {
+        tintRes?.let {
+            image?.let { imageView ->
+                ImageViewCompat.setImageTintList(
+                    imageView,
+                    ColorStateList.valueOf(ContextCompat.getColor(context, tintRes))
+                )
+            }
+        }
     }
 
     fun getImageHeight(): Int? = image?.height

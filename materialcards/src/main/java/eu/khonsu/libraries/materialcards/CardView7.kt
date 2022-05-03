@@ -1,6 +1,7 @@
 package eu.khonsu.libraries.materialcards
 
 import android.content.Context
+import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.View
@@ -8,9 +9,12 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
+import androidx.core.widget.ImageViewCompat
 import eu.khonsu.libraries.materialcards.extensions.hideIf
 
 /**
@@ -47,6 +51,9 @@ class CardView7(context: Context, attrs: AttributeSet) : CardView(context, attrs
                 R.styleable.CardView7_cv7_srcImage -> setImageSrc(
                     typedArray.getResourceId(attr, R.drawable.background_image)
                 )
+                R.styleable.CardView7_cv7_srcImageTint -> setImageSrcTint(
+                    typedArray.getResourceId(attr, R.attr.colorControlHighlight)
+                )
                 R.styleable.CardView7_cv7_title -> setTitleText(typedArray.getString(attr))
                 R.styleable.CardView7_cv7_subtitle -> setSubtitleText(typedArray.getString(attr))
                 R.styleable.CardView7_cv7_action1Text -> setAction1Text(typedArray.getString(attr))
@@ -81,6 +88,19 @@ class CardView7(context: Context, attrs: AttributeSet) : CardView(context, attrs
 
     fun setImageSrc(@DrawableRes value: Int) {
         image?.setImageResource(value)
+    }
+
+    fun getImageSrcTint(): ColorStateList? = image?.imageTintList
+
+    fun setImageSrcTint(@ColorRes tintRes: Int?) {
+        tintRes?.let {
+            image?.let { imageView ->
+                ImageViewCompat.setImageTintList(
+                    imageView,
+                    ColorStateList.valueOf(ContextCompat.getColor(context, tintRes))
+                )
+            }
+        }
     }
 
     fun getTitleText(): CharSequence? = title?.text
