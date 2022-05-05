@@ -35,7 +35,7 @@ dependencies {
 
     // Design elements
     implementation("androidx.constraintlayout:constraintlayout:2.1.3")
-    implementation("com.google.android.material:material:1.5.0")
+    implementation("com.google.android.material:material:1.6.0")
 }
 
 publishing {
