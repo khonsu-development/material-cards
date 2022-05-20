@@ -34,7 +34,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.4.1")
 
     // Design elements
-    implementation("androidx.constraintlayout:constraintlayout:2.1.3")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.android.material:material:1.6.0")
 }
 
