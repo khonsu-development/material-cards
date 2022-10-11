@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="materialcards/src/main/res/drawable/background_image.xml" value="0.1625" />
+        <entry key="materialcards/src/main/res/drawable/ic_avatar.xml" value="0.1625" />
+        <entry key="materialcards/src/main/res/drawable/ic_expand_less.xml" value="0.1625" />
+        <entry key="materialcards/src/main/res/drawable/ic_expand_more.xml" value="0.1625" />
+        <entry key="materialcards/src/main/res/drawable/ic_star_outline.xml" value="0.1625" />
+        <entry key="materialcards/src/main/res/drawable/ic_star_outline_white.xml" value="0.1625" />
+        <entry key="materialcards/src/main/res/layout/card_view_1.xml" value="0.30625" />
+        <entry key="materialcards/src/main/res/layout/card_view_10.xml" value="0.30625" />
+        <entry key="materialcards/src/main/res/layout/card_view_11.xml" value="0.30625" />
+        <entry key="materialcards/src/main/res/layout/card_view_12.xml" value="0.30625" />
+        <entry key="materialcards/src/main/res/layout/card_view_2.xml" value="0.30625" />
+        <entry key="materialcards/src/main/res/layout/card_view_4.xml" value="0.30625" />
+        <entry key="materialcards/src/main/res/layout/card_view_5.xml" value="0.30625" />
+        <entry key="materialcards/src/main/res/layout/card_view_6.xml" value="0.30625" />
+        <entry key="materialcards/src/main/res/layout/card_view_7.xml" value="0.30625" />
+        <entry key="materialcards/src/main/res/layout/card_view_8.xml" value="0.30625" />
+        <entry key="materialcards/src/main/res/layout/card_view_8_image_left.xml" value="0.30625" />
+        <entry key="materialcards/src/main/res/layout/card_view_9.xml" value="0.30625" />
+        <entry key="materialcards/src/main/res/layout/showcase.xml" value="0.30625" />
+      </map>
+    </option>
+  </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$" />
   </component>

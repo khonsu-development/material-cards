@@ -2,11 +2,14 @@
 <resources>
     <declare-styleable name="CardView1">
         <attr name="cv1_srcImage" format="reference" />
+        <attr name="cv1_srcImageTint" format="reference" />
         <attr name="cv1_supportingText" format="string" localization="suggested" />
     </declare-styleable>
     <declare-styleable name="CardView2">
         <attr name="cv2_avatarImage" format="reference" />
+        <attr name="cv2_avatarImageTint" format="reference" />
         <attr name="cv2_srcImage" format="reference" />
+        <attr name="cv2_srcImageTint" format="reference" />
         <attr name="cv2_title" format="string" localization="suggested" />
         <attr name="cv2_subtitle" format="string" localization="suggested" />
         <attr name="cv2_supportingText" format="string" localization="suggested" />
@@ -19,6 +22,7 @@
     </declare-styleable>
     <declare-styleable name="CardView4">
         <attr name="cv4_srcImage" format="reference" />
+        <attr name="cv4_srcImageTint" format="reference" />
         <attr name="cv4_title" format="string" localization="suggested" />
         <attr name="cv4_subtitle" format="string" localization="suggested" />
         <attr name="cv4_supportingText" format="string" localization="suggested" />
@@ -38,12 +42,14 @@
     </declare-styleable>
     <declare-styleable name="CardView6">
         <attr name="cv6_srcImage" format="reference" />
+        <attr name="cv6_srcImageTint" format="reference" />
         <attr name="cv6_action1Drawable" format="reference" />
         <attr name="cv6_action2Drawable" format="reference" />
         <attr name="cv6_action3Drawable" format="reference" />
     </declare-styleable>
     <declare-styleable name="CardView7">
         <attr name="cv7_srcImage" format="reference" />
+        <attr name="cv7_srcImageTint" format="reference" />
         <attr name="cv7_title" format="string" localization="suggested" />
         <attr name="cv7_subtitle" format="string" localization="suggested" />
         <attr name="cv7_action1Text" format="string" localization="suggested" />
@@ -57,6 +63,7 @@
         <attr name="cv8_subtitle" format="string" localization="suggested" />
         <attr name="cv8_supportingText" format="string" localization="suggested" />
         <attr name="cv8_srcImage" format="reference" />
+        <attr name="cv8_srcImageTint" format="reference" />
         <attr name="cv8_imageHeight" format="dimension" />
         <attr name="cv8_imageWidth" format="dimension" />
         <attr name="cv8_action1Text" format="string" localization="suggested" />
@@ -68,6 +75,7 @@
         <attr name="cv8b_subtitle" format="string" localization="suggested" />
         <attr name="cv8b_supportingText" format="string" localization="suggested" />
         <attr name="cv8b_srcImage" format="reference" />
+        <attr name="cv8b_srcImageTint" format="reference" />
         <attr name="cv8b_imageHeight" format="dimension" />
         <attr name="cv8b_imageWidth" format="dimension" />
         <attr name="cv8b_action1Text" format="string" localization="suggested" />
@@ -79,6 +87,7 @@
         <attr name="cv9_subtitle" format="string" localization="suggested" />
         <attr name="cv9_supportingText" format="string" localization="suggested" />
         <attr name="cv9_srcImage" format="reference" />
+        <attr name="cv9_srcImageTint" format="reference" />
         <attr name="cv9_action1Text" format="string" localization="suggested" />
         <attr name="cv9_action2Text" format="string" localization="suggested" />
         <attr name="cv9_action3Text" format="string" localization="suggested" />
@@ -88,12 +97,14 @@
         <attr name="cv10_subtitle" format="string" localization="suggested" />
         <attr name="cv10_supportingText" format="string" localization="suggested" />
         <attr name="cv10_srcImage" format="reference" />
+        <attr name="cv10_srcImageTint" format="reference" />
         <attr name="cv10_action1Text" format="string" localization="suggested" />
         <attr name="cv10_action2Text" format="string" localization="suggested" />
         <attr name="cv10_action3Text" format="string" localization="suggested" />
     </declare-styleable>
     <declare-styleable name="CardView11">
         <attr name="cv11_srcImage" format="reference" />
+        <attr name="cv11_srcImageTint" format="reference" />
         <attr name="cv11_action1Drawable" format="reference" />
         <attr name="cv11_action2Drawable" format="reference" />
         <attr name="cv11_action3Drawable" format="reference" />

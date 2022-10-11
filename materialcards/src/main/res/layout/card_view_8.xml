@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_view"
-    style="@style/CardView.Light"
+    style="@style/CardView"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/white">
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_layout"
@@ -20,10 +20,10 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            android:textColor="@color/text_color"
             app:layout_constraintEnd_toStartOf="@+id/image"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/title_8" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/subtitle"
@@ -32,10 +32,11 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="@color/text_color_light"
+            android:textColor="?android:attr/textColorSecondary"
             app:layout_constraintEnd_toStartOf="@+id/image"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title" />
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:text="@string/subtitle" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/supporting_text"
@@ -46,11 +47,11 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="@color/text_color"
             app:layout_constraintBottom_toTopOf="@id/action_button_1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image" />
+            app:layout_constraintTop_toBottomOf="@+id/image"
+            tools:text="@string/supporting_text_long" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/image"
@@ -58,11 +59,10 @@
             android:layout_height="@dimen/image_default_size"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
             app:layout_constraintBottom_toBottomOf="@id/subtitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/title"
-            app:srcCompat="@drawable/background_image" />
+            tools:src="@drawable/background_image" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/action_button_1"
@@ -70,14 +70,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:minWidth="0dp"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
-            android:text="@android:string/ok"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/supporting_text" />
+            app:layout_constraintTop_toBottomOf="@+id/supporting_text"
+            tools:text="@android:string/ok" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/action_button_2"
@@ -85,13 +84,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:minWidth="0dp"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
-            android:text="@android:string/cancel"
             app:layout_constraintStart_toEndOf="@+id/action_button_1"
-            app:layout_constraintTop_toTopOf="@+id/action_button_1" />
+            app:layout_constraintTop_toTopOf="@+id/action_button_1"
+            tools:text="@android:string/cancel" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/action_button_3"
@@ -99,13 +97,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:minWidth="0dp"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
-            android:text="@android:string/copy"
             app:layout_constraintStart_toEndOf="@+id/action_button_2"
-            app:layout_constraintTop_toTopOf="@+id/action_button_2" />
+            app:layout_constraintTop_toTopOf="@+id/action_button_2"
+            tools:text="@android:string/copy" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
