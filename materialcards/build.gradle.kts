@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
     id("com.android.library")
     id("kotlin-android")
@@ -13,6 +11,12 @@ version = "1.1-SNAPSHOT"
 android {
     compileSdk = 31
     buildToolsVersion = "30.0.3"
+    namespace = "eu.khonsu.libraries.materialcards"
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
 
     defaultConfig {
         minSdk = 21
@@ -51,16 +55,5 @@ publishing {
                 from(components["release"])
             }
         }
-    }
-}
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
-}
-
-tasks.withType<KotlinCompile>().configureEach {
-    kotlinOptions {
-        jvmTarget = "11"
     }
 }
