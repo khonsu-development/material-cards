@@ -48,22 +48,27 @@ class CardView9(context: Context, attrs: AttributeSet) : CardView(context, attrs
                 R.styleable.CardView9_cv9_title -> setTitleText(typedArray.getString(attr))
                 R.styleable.CardView9_cv9_subtitle -> setSubtitleText(typedArray.getString(attr))
                 R.styleable.CardView9_cv9_supportingText -> setSupportingText(
-                    typedArray.getString(attr)
+                    typedArray.getString(attr),
                 )
+
                 R.styleable.CardView9_cv9_srcImage -> setImageSrc(
-                    typedArray.getResourceId(attr, R.drawable.background_image)
+                    typedArray.getResourceId(attr, R.drawable.background_image),
                 )
+
                 R.styleable.CardView9_cv9_srcImageTint -> setImageSrcTint(
-                    typedArray.getResourceId(attr, R.attr.colorControlHighlight)
+                    typedArray.getResourceId(attr, R.attr.colorControlHighlight),
                 )
+
                 R.styleable.CardView9_cv9_action1Text -> setAction1Text(
-                    typedArray.getString(attr)
+                    typedArray.getString(attr),
                 )
+
                 R.styleable.CardView9_cv9_action2Text -> setAction2Text(
-                    typedArray.getString(attr)
+                    typedArray.getString(attr),
                 )
+
                 R.styleable.CardView9_cv9_action3Text -> setAction3Text(
-                    typedArray.getString(attr)
+                    typedArray.getString(attr),
                 )
             }
         }
@@ -114,7 +119,7 @@ class CardView9(context: Context, attrs: AttributeSet) : CardView(context, attrs
             image?.let { imageView ->
                 ImageViewCompat.setImageTintList(
                     imageView,
-                    ColorStateList.valueOf(ContextCompat.getColor(context, tintRes))
+                    ColorStateList.valueOf(ContextCompat.getColor(context, tintRes)),
                 )
             }
         }

@@ -39,19 +39,23 @@ class CardView11(context: Context, attrs: AttributeSet) : CardView(context, attr
         for (index in 0 until typedArray.indexCount) {
             when (val attr = typedArray.getIndex(index)) {
                 R.styleable.CardView11_cv11_srcImage -> setImageSrc(
-                    typedArray.getResourceId(attr, R.drawable.background_image)
+                    typedArray.getResourceId(attr, R.drawable.background_image),
                 )
+
                 R.styleable.CardView11_cv11_srcImageTint -> setImageSrcTint(
-                    typedArray.getResourceId(attr, R.attr.colorControlHighlight)
+                    typedArray.getResourceId(attr, R.attr.colorControlHighlight),
                 )
+
                 R.styleable.CardView11_cv11_action1Drawable -> setActionButton1Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline)
+                    typedArray.getResourceId(attr, R.drawable.ic_star_outline),
                 )
+
                 R.styleable.CardView11_cv11_action2Drawable -> setActionButton2Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline)
+                    typedArray.getResourceId(attr, R.drawable.ic_star_outline),
                 )
+
                 R.styleable.CardView11_cv11_action3Drawable -> setActionButton3Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline)
+                    typedArray.getResourceId(attr, R.drawable.ic_star_outline),
                 )
             }
         }
@@ -79,7 +83,7 @@ class CardView11(context: Context, attrs: AttributeSet) : CardView(context, attr
             image?.let { imageView ->
                 ImageViewCompat.setImageTintList(
                     imageView,
-                    ColorStateList.valueOf(ContextCompat.getColor(context, tintRes))
+                    ColorStateList.valueOf(ContextCompat.getColor(context, tintRes)),
                 )
             }
         }

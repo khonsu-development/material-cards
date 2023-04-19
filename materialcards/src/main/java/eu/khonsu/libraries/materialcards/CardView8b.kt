@@ -48,34 +48,41 @@ class CardView8b(context: Context, attrs: AttributeSet) : CardView(context, attr
                 R.styleable.CardView8b_cv8b_title -> setTitleText(typedArray.getString(attr))
                 R.styleable.CardView8b_cv8b_subtitle -> setSubtitleText(typedArray.getString(attr))
                 R.styleable.CardView8b_cv8b_supportingText -> setSupportingText(
-                    typedArray.getString(attr)
+                    typedArray.getString(attr),
                 )
+
                 R.styleable.CardView8b_cv8b_srcImage -> setImageSrc(
-                    typedArray.getResourceId(attr, R.drawable.background_image)
+                    typedArray.getResourceId(attr, R.drawable.background_image),
                 )
+
                 R.styleable.CardView8b_cv8b_srcImageTint -> setImageSrcTint(
-                    typedArray.getResourceId(attr, R.attr.colorControlHighlight)
+                    typedArray.getResourceId(attr, R.attr.colorControlHighlight),
                 )
+
                 R.styleable.CardView8b_cv8b_imageHeight -> setImageHeight(
                     typedArray.getDimensionPixelSize(
                         attr,
-                        resources.getDimensionPixelSize(R.dimen.image_default_size)
-                    )
+                        resources.getDimensionPixelSize(R.dimen.image_default_size),
+                    ),
                 )
+
                 R.styleable.CardView8b_cv8b_imageWidth -> setImageWidth(
                     typedArray.getDimensionPixelSize(
                         attr,
-                        resources.getDimensionPixelSize(R.dimen.image_default_size)
-                    )
+                        resources.getDimensionPixelSize(R.dimen.image_default_size),
+                    ),
                 )
+
                 R.styleable.CardView8b_cv8b_action1Text -> setAction1Text(
-                    typedArray.getString(attr)
+                    typedArray.getString(attr),
                 )
+
                 R.styleable.CardView8b_cv8b_action2Text -> setAction2Text(
-                    typedArray.getString(attr)
+                    typedArray.getString(attr),
                 )
+
                 R.styleable.CardView8b_cv8b_action3Text -> setAction3Text(
-                    typedArray.getString(attr)
+                    typedArray.getString(attr),
                 )
             }
         }
@@ -126,7 +133,7 @@ class CardView8b(context: Context, attrs: AttributeSet) : CardView(context, attr
             image?.let { imageView ->
                 ImageViewCompat.setImageTintList(
                     imageView,
-                    ColorStateList.valueOf(ContextCompat.getColor(context, tintRes))
+                    ColorStateList.valueOf(ContextCompat.getColor(context, tintRes)),
                 )
             }
         }

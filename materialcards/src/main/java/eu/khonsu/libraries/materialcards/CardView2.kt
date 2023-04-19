@@ -54,39 +54,49 @@ class CardView2(context: Context, attrs: AttributeSet) : CardView(context, attrs
         for (index in 0 until typedArray.indexCount) {
             when (val attr = typedArray.getIndex(index)) {
                 R.styleable.CardView2_cv2_avatarImage -> setAvatarDrawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_avatar)
+                    typedArray.getResourceId(attr, R.drawable.ic_avatar),
                 )
+
                 R.styleable.CardView2_cv2_avatarImageTint -> setAvatarDrawableTint(
-                    typedArray.getResourceId(attr, R.attr.colorControlHighlight)
+                    typedArray.getResourceId(attr, R.attr.colorControlHighlight),
                 )
+
                 R.styleable.CardView2_cv2_title -> setTitleText(typedArray.getString(attr))
                 R.styleable.CardView2_cv2_subtitle -> setSubtitleText(typedArray.getString(attr))
                 R.styleable.CardView2_cv2_srcImage -> setImageSrc(
-                    typedArray.getResourceId(attr, R.drawable.background_image)
+                    typedArray.getResourceId(attr, R.drawable.background_image),
                 )
+
                 R.styleable.CardView2_cv2_srcImageTint -> setImageSrcTint(
-                    typedArray.getResourceId(attr, R.attr.colorControlHighlight)
+                    typedArray.getResourceId(attr, R.attr.colorControlHighlight),
                 )
+
                 R.styleable.CardView2_cv2_supportingText -> setSupportingText(
-                    typedArray.getString(attr)
+                    typedArray.getString(attr),
                 )
+
                 R.styleable.CardView2_cv2_action1Text -> setAction1Text(
-                    typedArray.getString(attr)
+                    typedArray.getString(attr),
                 )
+
                 R.styleable.CardView2_cv2_action2Text -> setAction2Text(
-                    typedArray.getString(attr)
+                    typedArray.getString(attr),
                 )
+
                 R.styleable.CardView2_cv2_action3Text -> setAction3Text(
-                    typedArray.getString(attr)
+                    typedArray.getString(attr),
                 )
+
                 R.styleable.CardView2_cv2_supplementalAction1Drawable -> setSupplementalAction1Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline)
+                    typedArray.getResourceId(attr, R.drawable.ic_star_outline),
                 )
+
                 R.styleable.CardView2_cv2_supplementalAction2Drawable -> setSupplementalAction2Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline)
+                    typedArray.getResourceId(attr, R.drawable.ic_star_outline),
                 )
+
                 R.styleable.CardView2_cv2_supplementalAction3Drawable -> setSupplementalAction3Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline)
+                    typedArray.getResourceId(attr, R.drawable.ic_star_outline),
                 )
             }
         }
@@ -121,7 +131,7 @@ class CardView2(context: Context, attrs: AttributeSet) : CardView(context, attrs
             avatarImage?.let { imageView ->
                 ImageViewCompat.setImageTintList(
                     imageView,
-                    ColorStateList.valueOf(ContextCompat.getColor(context, drawableRes))
+                    ColorStateList.valueOf(ContextCompat.getColor(context, drawableRes)),
                 )
             }
         }
@@ -153,7 +163,7 @@ class CardView2(context: Context, attrs: AttributeSet) : CardView(context, attrs
             image?.let { imageView ->
                 ImageViewCompat.setImageTintList(
                     imageView,
-                    ColorStateList.valueOf(ContextCompat.getColor(context, tintRes))
+                    ColorStateList.valueOf(ContextCompat.getColor(context, tintRes)),
                 )
             }
         }

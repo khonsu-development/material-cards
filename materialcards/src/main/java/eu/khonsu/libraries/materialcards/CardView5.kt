@@ -47,22 +47,27 @@ class CardView5(context: Context, attrs: AttributeSet) : CardView(context, attrs
                 R.styleable.CardView5_cv5_title -> setTitleText(typedArray.getString(attr))
                 R.styleable.CardView5_cv5_subtitle -> setSubtitleText(typedArray.getString(attr))
                 R.styleable.CardView5_cv5_supportingText -> setSupportingText(
-                    typedArray.getString(attr)
+                    typedArray.getString(attr),
                 )
+
                 R.styleable.CardView5_cv5_action1Text -> setAction1Text(
-                    typedArray.getString(attr)
+                    typedArray.getString(attr),
                 )
+
                 R.styleable.CardView5_cv5_action2Text -> setAction2Text(
-                    typedArray.getString(attr)
+                    typedArray.getString(attr),
                 )
+
                 R.styleable.CardView5_cv5_supplementalAction1Drawable -> setSupplementalAction1Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline)
+                    typedArray.getResourceId(attr, R.drawable.ic_star_outline),
                 )
+
                 R.styleable.CardView5_cv5_supplementalAction2Drawable -> setSupplementalAction2Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline)
+                    typedArray.getResourceId(attr, R.drawable.ic_star_outline),
                 )
+
                 R.styleable.CardView5_cv5_supplementalAction3Drawable -> setSupplementalAction3Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline)
+                    typedArray.getResourceId(attr, R.drawable.ic_star_outline),
                 )
             }
         }

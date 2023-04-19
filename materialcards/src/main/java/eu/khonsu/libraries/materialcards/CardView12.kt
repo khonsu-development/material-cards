@@ -44,7 +44,7 @@ class CardView12(context: Context, attrs: AttributeSet) : CardView(context, attr
                 R.styleable.CardView12_cv12_title -> setTitleText(typedArray.getString(attr))
                 R.styleable.CardView12_cv12_subtitle -> setSubtitleText(typedArray.getString(attr))
                 R.styleable.CardView12_cv12_supportingText -> setSupportingText(
-                    typedArray.getString(attr)
+                    typedArray.getString(attr),
                 )
             }
         }

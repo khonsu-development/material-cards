@@ -35,13 +35,15 @@ class CardView1(context: Context, attrs: AttributeSet) : CardView(context, attrs
         for (index in 0 until typedArray.indexCount) {
             when (val attr = typedArray.getIndex(index)) {
                 R.styleable.CardView1_cv1_srcImage -> setImageSrc(
-                    typedArray.getResourceId(attr, R.drawable.background_image)
+                    typedArray.getResourceId(attr, R.drawable.background_image),
                 )
+
                 R.styleable.CardView1_cv1_srcImageTint -> setImageSrcTint(
-                    typedArray.getResourceId(attr, R.attr.colorControlHighlight)
+                    typedArray.getResourceId(attr, R.attr.colorControlHighlight),
                 )
+
                 R.styleable.CardView1_cv1_supportingText -> setSupportingText(
-                    typedArray.getString(attr)
+                    typedArray.getString(attr),
                 )
             }
         }
@@ -67,7 +69,7 @@ class CardView1(context: Context, attrs: AttributeSet) : CardView(context, attrs
             image?.let { imageView ->
                 ImageViewCompat.setImageTintList(
                     imageView,
-                    ColorStateList.valueOf(ContextCompat.getColor(context, tintRes))
+                    ColorStateList.valueOf(ContextCompat.getColor(context, tintRes)),
                 )
             }
         }
