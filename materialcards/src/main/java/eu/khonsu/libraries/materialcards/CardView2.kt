@@ -58,7 +58,7 @@ class CardView2(context: Context, attrs: AttributeSet) : CardView(context, attrs
                 )
 
                 R.styleable.CardView2_cv2_avatarImageTint -> setAvatarDrawableTint(
-                    typedArray.getResourceId(attr, R.attr.colorControlHighlight),
+                    typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
                 )
 
                 R.styleable.CardView2_cv2_title -> setTitleText(typedArray.getString(attr))
@@ -68,7 +68,7 @@ class CardView2(context: Context, attrs: AttributeSet) : CardView(context, attrs
                 )
 
                 R.styleable.CardView2_cv2_srcImageTint -> setImageSrcTint(
-                    typedArray.getResourceId(attr, R.attr.colorControlHighlight),
+                    typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
                 )
 
                 R.styleable.CardView2_cv2_supportingText -> setSupportingText(

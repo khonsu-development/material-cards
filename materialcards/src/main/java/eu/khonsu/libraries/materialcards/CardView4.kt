@@ -63,7 +63,7 @@ class CardView4(context: Context, attrs: AttributeSet) : CardView(context, attrs
                 )
 
                 R.styleable.CardView4_cv4_srcImageTint -> setImageSrcTint(
-                    typedArray.getResourceId(attr, R.attr.colorControlHighlight),
+                    typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
                 )
 
                 R.styleable.CardView4_cv4_title -> setTitleText(typedArray.getString(attr))

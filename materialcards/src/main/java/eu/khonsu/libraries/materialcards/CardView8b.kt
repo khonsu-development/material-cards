@@ -56,7 +56,7 @@ class CardView8b(context: Context, attrs: AttributeSet) : CardView(context, attr
                 )
 
                 R.styleable.CardView8b_cv8b_srcImageTint -> setImageSrcTint(
-                    typedArray.getResourceId(attr, R.attr.colorControlHighlight),
+                    typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
                 )
 
                 R.styleable.CardView8b_cv8b_imageHeight -> setImageHeight(

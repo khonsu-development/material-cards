@@ -43,7 +43,7 @@ class CardView11(context: Context, attrs: AttributeSet) : CardView(context, attr
                 )
 
                 R.styleable.CardView11_cv11_srcImageTint -> setImageSrcTint(
-                    typedArray.getResourceId(attr, R.attr.colorControlHighlight),
+                    typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
                 )
 
                 R.styleable.CardView11_cv11_action1Drawable -> setActionButton1Drawable(

@@ -56,7 +56,7 @@ class CardView10(context: Context, attrs: AttributeSet) : CardView(context, attr
                 )
 
                 R.styleable.CardView10_cv10_srcImageTint -> setImageSrcTint(
-                    typedArray.getResourceId(attr, R.attr.colorControlHighlight),
+                    typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
                 )
 
                 R.styleable.CardView10_cv10_action1Text -> setAction1Text(
