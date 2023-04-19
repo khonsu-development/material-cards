@@ -12,12 +12,14 @@ android {
     compileSdk = 31
     buildToolsVersion = "30.0.3"
     namespace = "eu.khonsu.libraries.materialcards"
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-
+    kotlinOptions {
+        jvmTarget = "17"
+        freeCompilerArgs = freeCompilerArgs + listOf("-Xjvm-default=all-compatibility")
+    }
     defaultConfig {
         minSdk = 21
         targetSdk = 31
