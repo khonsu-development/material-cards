@@ -1,7 +1,7 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
-    id("org.jlleitschuh.gradle.ktlint") version "11.4.2"
+    id("org.jlleitschuh.gradle.ktlint") version "11.5.0"
     id("maven-publish")
 }
 
