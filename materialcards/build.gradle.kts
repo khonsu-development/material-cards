@@ -10,7 +10,6 @@ version = "1.1-SNAPSHOT"
 
 android {
     compileSdk = 31
-    buildToolsVersion = "30.0.3"
     namespace = "eu.khonsu.libraries.materialcards"
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -22,7 +21,6 @@ android {
     }
     defaultConfig {
         minSdk = 21
-        targetSdk = 31
         vectorDrawables.useSupportLibrary = true
     }
 }
