@@ -16,14 +16,16 @@ import eu.khonsu.libraries.materialcards.extensions.show
  */
 @Suppress("MemberVisibilityCanBePrivate", "unused")
 class CardView12(context: Context, attrs: AttributeSet) : CardView(context, attrs) {
-
     var constraintLayout: ConstraintLayout? = null
     var title: TextView? = null
     var subtitle: TextView? = null
     var supportingText: TextView? = null
     var expandButton: ImageButton? = null
 
-    private fun init(context: Context, attrs: AttributeSet) {
+    private fun init(
+        context: Context,
+        attrs: AttributeSet,
+    ) {
         View.inflate(context, R.layout.card_view_12, this)
         initComponents()
         setTitleText("")
@@ -43,9 +45,10 @@ class CardView12(context: Context, attrs: AttributeSet) : CardView(context, attr
             when (val attr = typedArray.getIndex(index)) {
                 R.styleable.CardView12_cv12_title -> setTitleText(typedArray.getString(attr))
                 R.styleable.CardView12_cv12_subtitle -> setSubtitleText(typedArray.getString(attr))
-                R.styleable.CardView12_cv12_supportingText -> setSupportingText(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView12_cv12_supportingText ->
+                    setSupportingText(
+                        typedArray.getString(attr),
+                    )
             }
         }
         typedArray.recycle()

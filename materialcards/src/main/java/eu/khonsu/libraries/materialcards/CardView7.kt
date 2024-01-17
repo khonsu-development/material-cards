@@ -24,7 +24,6 @@ import eu.khonsu.libraries.materialcards.extensions.hideIf
  */
 @Suppress("MemberVisibilityCanBePrivate", "unused")
 class CardView7(context: Context, attrs: AttributeSet) : CardView(context, attrs) {
-
     var constraintLayout: ConstraintLayout? = null
     var image: ImageView? = null
     var title: TextView? = null
@@ -35,7 +34,10 @@ class CardView7(context: Context, attrs: AttributeSet) : CardView(context, attrs
     var supplementalAction2: ImageButton? = null
     var supplementalAction3: ImageButton? = null
 
-    private fun init(context: Context, attrs: AttributeSet) {
+    private fun init(
+        context: Context,
+        attrs: AttributeSet,
+    ) {
         View.inflate(context, R.layout.card_view_7, this)
         initComponents()
         setTitleText("")
@@ -48,29 +50,34 @@ class CardView7(context: Context, attrs: AttributeSet) : CardView(context, attrs
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CardView7)
         for (index in 0 until typedArray.indexCount) {
             when (val attr = typedArray.getIndex(index)) {
-                R.styleable.CardView7_cv7_srcImage -> setImageSrc(
-                    typedArray.getResourceId(attr, R.drawable.background_image),
-                )
+                R.styleable.CardView7_cv7_srcImage ->
+                    setImageSrc(
+                        typedArray.getResourceId(attr, R.drawable.background_image),
+                    )
 
-                R.styleable.CardView7_cv7_srcImageTint -> setImageSrcTint(
-                    typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
-                )
+                R.styleable.CardView7_cv7_srcImageTint ->
+                    setImageSrcTint(
+                        typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
+                    )
 
                 R.styleable.CardView7_cv7_title -> setTitleText(typedArray.getString(attr))
                 R.styleable.CardView7_cv7_subtitle -> setSubtitleText(typedArray.getString(attr))
                 R.styleable.CardView7_cv7_action1Text -> setAction1Text(typedArray.getString(attr))
                 R.styleable.CardView7_cv7_action2Text -> setAction2Text(typedArray.getString(attr))
-                R.styleable.CardView7_cv7_supplementalAction1Drawable -> setSupplementalAction1Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline),
-                )
+                R.styleable.CardView7_cv7_supplementalAction1Drawable ->
+                    setSupplementalAction1Drawable(
+                        typedArray.getResourceId(attr, R.drawable.ic_star_outline),
+                    )
 
-                R.styleable.CardView7_cv7_supplementalAction2Drawable -> setSupplementalAction2Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline),
-                )
+                R.styleable.CardView7_cv7_supplementalAction2Drawable ->
+                    setSupplementalAction2Drawable(
+                        typedArray.getResourceId(attr, R.drawable.ic_star_outline),
+                    )
 
-                R.styleable.CardView7_cv7_supplementalAction3Drawable -> setSupplementalAction3Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline),
-                )
+                R.styleable.CardView7_cv7_supplementalAction3Drawable ->
+                    setSupplementalAction3Drawable(
+                        typedArray.getResourceId(attr, R.drawable.ic_star_outline),
+                    )
             }
         }
         typedArray.recycle()
@@ -90,13 +97,17 @@ class CardView7(context: Context, attrs: AttributeSet) : CardView(context, attrs
 
     fun getImageSrc(): Drawable? = image?.drawable
 
-    fun setImageSrc(@DrawableRes value: Int) {
+    fun setImageSrc(
+        @DrawableRes value: Int,
+    ) {
         image?.setImageResource(value)
     }
 
     fun getImageSrcTint(): ColorStateList? = image?.imageTintList
 
-    fun setImageSrcTint(@ColorRes tintRes: Int?) {
+    fun setImageSrcTint(
+        @ColorRes tintRes: Int?,
+    ) {
         tintRes?.let {
             image?.let { imageView ->
                 ImageViewCompat.setImageTintList(
@@ -135,21 +146,27 @@ class CardView7(context: Context, attrs: AttributeSet) : CardView(context, attrs
 
     fun getSupplementalAction1Drawable(): Drawable? = supplementalAction1?.drawable
 
-    private fun setSupplementalAction1Drawable(@DrawableRes drawableRes: Int?) {
+    private fun setSupplementalAction1Drawable(
+        @DrawableRes drawableRes: Int?,
+    ) {
         supplementalAction1?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
         drawableRes?.let { supplementalAction1?.setImageResource(drawableRes) }
     }
 
     fun getSupplementalAction2Drawable(): Drawable? = supplementalAction2?.drawable
 
-    private fun setSupplementalAction2Drawable(@DrawableRes drawableRes: Int?) {
+    private fun setSupplementalAction2Drawable(
+        @DrawableRes drawableRes: Int?,
+    ) {
         supplementalAction2?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
         drawableRes?.let { supplementalAction2?.setImageResource(drawableRes) }
     }
 
     fun getSupplementalAction3Drawable(): Drawable? = supplementalAction3?.drawable
 
-    private fun setSupplementalAction3Drawable(@DrawableRes drawableRes: Int?) {
+    private fun setSupplementalAction3Drawable(
+        @DrawableRes drawableRes: Int?,
+    ) {
         supplementalAction3?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
         drawableRes?.let { supplementalAction3?.setImageResource(drawableRes) }
     }

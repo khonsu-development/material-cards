@@ -24,7 +24,6 @@ import eu.khonsu.libraries.materialcards.extensions.hideIf
  */
 @Suppress("MemberVisibilityCanBePrivate", "unused")
 class CardView2(context: Context, attrs: AttributeSet) : CardView(context, attrs) {
-
     var constraintLayout: ConstraintLayout? = null
     var avatarImage: ImageView? = null
     var title: TextView? = null
@@ -38,7 +37,10 @@ class CardView2(context: Context, attrs: AttributeSet) : CardView(context, attrs
     var supplementalAction2: ImageButton? = null
     var supplementalAction3: ImageButton? = null
 
-    private fun init(context: Context, attrs: AttributeSet) {
+    private fun init(
+        context: Context,
+        attrs: AttributeSet,
+    ) {
         View.inflate(context, R.layout.card_view_2, this)
         initComponents()
         setTitleText("")
@@ -53,51 +55,62 @@ class CardView2(context: Context, attrs: AttributeSet) : CardView(context, attrs
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CardView2)
         for (index in 0 until typedArray.indexCount) {
             when (val attr = typedArray.getIndex(index)) {
-                R.styleable.CardView2_cv2_avatarImage -> setAvatarDrawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_avatar),
-                )
+                R.styleable.CardView2_cv2_avatarImage ->
+                    setAvatarDrawable(
+                        typedArray.getResourceId(attr, R.drawable.ic_avatar),
+                    )
 
-                R.styleable.CardView2_cv2_avatarImageTint -> setAvatarDrawableTint(
-                    typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
-                )
+                R.styleable.CardView2_cv2_avatarImageTint ->
+                    setAvatarDrawableTint(
+                        typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
+                    )
 
                 R.styleable.CardView2_cv2_title -> setTitleText(typedArray.getString(attr))
                 R.styleable.CardView2_cv2_subtitle -> setSubtitleText(typedArray.getString(attr))
-                R.styleable.CardView2_cv2_srcImage -> setImageSrc(
-                    typedArray.getResourceId(attr, R.drawable.background_image),
-                )
+                R.styleable.CardView2_cv2_srcImage ->
+                    setImageSrc(
+                        typedArray.getResourceId(attr, R.drawable.background_image),
+                    )
 
-                R.styleable.CardView2_cv2_srcImageTint -> setImageSrcTint(
-                    typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
-                )
+                R.styleable.CardView2_cv2_srcImageTint ->
+                    setImageSrcTint(
+                        typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
+                    )
 
-                R.styleable.CardView2_cv2_supportingText -> setSupportingText(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView2_cv2_supportingText ->
+                    setSupportingText(
+                        typedArray.getString(attr),
+                    )
 
-                R.styleable.CardView2_cv2_action1Text -> setAction1Text(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView2_cv2_action1Text ->
+                    setAction1Text(
+                        typedArray.getString(attr),
+                    )
 
-                R.styleable.CardView2_cv2_action2Text -> setAction2Text(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView2_cv2_action2Text ->
+                    setAction2Text(
+                        typedArray.getString(attr),
+                    )
 
-                R.styleable.CardView2_cv2_action3Text -> setAction3Text(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView2_cv2_action3Text ->
+                    setAction3Text(
+                        typedArray.getString(attr),
+                    )
 
-                R.styleable.CardView2_cv2_supplementalAction1Drawable -> setSupplementalAction1Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline),
-                )
+                R.styleable.CardView2_cv2_supplementalAction1Drawable ->
+                    setSupplementalAction1Drawable(
+                        typedArray.getResourceId(attr, R.drawable.ic_star_outline),
+                    )
 
-                R.styleable.CardView2_cv2_supplementalAction2Drawable -> setSupplementalAction2Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline),
-                )
+                R.styleable.CardView2_cv2_supplementalAction2Drawable ->
+                    setSupplementalAction2Drawable(
+                        typedArray.getResourceId(attr, R.drawable.ic_star_outline),
+                    )
 
-                R.styleable.CardView2_cv2_supplementalAction3Drawable -> setSupplementalAction3Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline),
-                )
+                R.styleable.CardView2_cv2_supplementalAction3Drawable ->
+                    setSupplementalAction3Drawable(
+                        typedArray.getResourceId(attr, R.drawable.ic_star_outline),
+                    )
             }
         }
         typedArray.recycle()
@@ -120,13 +133,17 @@ class CardView2(context: Context, attrs: AttributeSet) : CardView(context, attrs
 
     fun getAvatarDrawable(): Drawable? = avatarImage?.drawable
 
-    fun setAvatarDrawable(@DrawableRes drawableRes: Int?) {
+    fun setAvatarDrawable(
+        @DrawableRes drawableRes: Int?,
+    ) {
         drawableRes?.let { avatarImage?.setImageResource(drawableRes) }
     }
 
     fun getAvatarDrawableTint(): ColorStateList? = avatarImage?.imageTintList
 
-    fun setAvatarDrawableTint(@ColorRes drawableRes: Int?) {
+    fun setAvatarDrawableTint(
+        @ColorRes drawableRes: Int?,
+    ) {
         drawableRes?.let {
             avatarImage?.let { imageView ->
                 ImageViewCompat.setImageTintList(
@@ -152,13 +169,17 @@ class CardView2(context: Context, attrs: AttributeSet) : CardView(context, attrs
 
     fun getImageSrc(): Drawable? = image?.drawable
 
-    fun setImageSrc(@DrawableRes value: Int) {
+    fun setImageSrc(
+        @DrawableRes value: Int,
+    ) {
         image?.setImageResource(value)
     }
 
     fun getImageSrcTint(): ColorStateList? = image?.imageTintList
 
-    fun setImageSrcTint(@ColorRes tintRes: Int?) {
+    fun setImageSrcTint(
+        @ColorRes tintRes: Int?,
+    ) {
         tintRes?.let {
             image?.let { imageView ->
                 ImageViewCompat.setImageTintList(
@@ -199,21 +220,27 @@ class CardView2(context: Context, attrs: AttributeSet) : CardView(context, attrs
 
     fun getSupplementalAction1Drawable(): Drawable? = supplementalAction1?.drawable
 
-    private fun setSupplementalAction1Drawable(@DrawableRes drawableRes: Int?) {
+    private fun setSupplementalAction1Drawable(
+        @DrawableRes drawableRes: Int?,
+    ) {
         supplementalAction1?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
         drawableRes?.let { supplementalAction1?.setImageResource(drawableRes) }
     }
 
     fun getSupplementalAction2Drawable(): Drawable? = supplementalAction2?.drawable
 
-    private fun setSupplementalAction2Drawable(@DrawableRes drawableRes: Int?) {
+    private fun setSupplementalAction2Drawable(
+        @DrawableRes drawableRes: Int?,
+    ) {
         supplementalAction2?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
         drawableRes?.let { supplementalAction2?.setImageResource(drawableRes) }
     }
 
     fun getSupplementalAction3Drawable(): Drawable? = supplementalAction3?.drawable
 
-    private fun setSupplementalAction3Drawable(@DrawableRes drawableRes: Int?) {
+    private fun setSupplementalAction3Drawable(
+        @DrawableRes drawableRes: Int?,
+    ) {
         supplementalAction3?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
         drawableRes?.let { supplementalAction3?.setImageResource(drawableRes) }
     }

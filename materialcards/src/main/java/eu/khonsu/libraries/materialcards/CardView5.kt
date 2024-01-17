@@ -19,7 +19,6 @@ import eu.khonsu.libraries.materialcards.extensions.hideIf
  */
 @Suppress("MemberVisibilityCanBePrivate", "unused")
 class CardView5(context: Context, attrs: AttributeSet) : CardView(context, attrs) {
-
     var constraintLayout: ConstraintLayout? = null
     var title: TextView? = null
     var subtitle: TextView? = null
@@ -30,7 +29,10 @@ class CardView5(context: Context, attrs: AttributeSet) : CardView(context, attrs
     var supplementalAction2: ImageButton? = null
     var supplementalAction3: ImageButton? = null
 
-    private fun init(context: Context, attrs: AttributeSet) {
+    private fun init(
+        context: Context,
+        attrs: AttributeSet,
+    ) {
         View.inflate(context, R.layout.card_view_5, this)
         initComponents()
         setTitleText("")
@@ -46,29 +48,35 @@ class CardView5(context: Context, attrs: AttributeSet) : CardView(context, attrs
             when (val attr = typedArray.getIndex(index)) {
                 R.styleable.CardView5_cv5_title -> setTitleText(typedArray.getString(attr))
                 R.styleable.CardView5_cv5_subtitle -> setSubtitleText(typedArray.getString(attr))
-                R.styleable.CardView5_cv5_supportingText -> setSupportingText(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView5_cv5_supportingText ->
+                    setSupportingText(
+                        typedArray.getString(attr),
+                    )
 
-                R.styleable.CardView5_cv5_action1Text -> setAction1Text(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView5_cv5_action1Text ->
+                    setAction1Text(
+                        typedArray.getString(attr),
+                    )
 
-                R.styleable.CardView5_cv5_action2Text -> setAction2Text(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView5_cv5_action2Text ->
+                    setAction2Text(
+                        typedArray.getString(attr),
+                    )
 
-                R.styleable.CardView5_cv5_supplementalAction1Drawable -> setSupplementalAction1Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline),
-                )
+                R.styleable.CardView5_cv5_supplementalAction1Drawable ->
+                    setSupplementalAction1Drawable(
+                        typedArray.getResourceId(attr, R.drawable.ic_star_outline),
+                    )
 
-                R.styleable.CardView5_cv5_supplementalAction2Drawable -> setSupplementalAction2Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline),
-                )
+                R.styleable.CardView5_cv5_supplementalAction2Drawable ->
+                    setSupplementalAction2Drawable(
+                        typedArray.getResourceId(attr, R.drawable.ic_star_outline),
+                    )
 
-                R.styleable.CardView5_cv5_supplementalAction3Drawable -> setSupplementalAction3Drawable(
-                    typedArray.getResourceId(attr, R.drawable.ic_star_outline),
-                )
+                R.styleable.CardView5_cv5_supplementalAction3Drawable ->
+                    setSupplementalAction3Drawable(
+                        typedArray.getResourceId(attr, R.drawable.ic_star_outline),
+                    )
             }
         }
         typedArray.recycle()
@@ -122,21 +130,27 @@ class CardView5(context: Context, attrs: AttributeSet) : CardView(context, attrs
 
     fun getSupplementalAction1Drawable(): Drawable? = supplementalAction1?.drawable
 
-    private fun setSupplementalAction1Drawable(@DrawableRes drawableRes: Int?) {
+    private fun setSupplementalAction1Drawable(
+        @DrawableRes drawableRes: Int?,
+    ) {
         supplementalAction1?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
         drawableRes?.let { supplementalAction1?.setImageResource(drawableRes) }
     }
 
     fun getSupplementalAction2Drawable(): Drawable? = supplementalAction2?.drawable
 
-    private fun setSupplementalAction2Drawable(@DrawableRes drawableRes: Int?) {
+    private fun setSupplementalAction2Drawable(
+        @DrawableRes drawableRes: Int?,
+    ) {
         supplementalAction2?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
         drawableRes?.let { supplementalAction2?.setImageResource(drawableRes) }
     }
 
     fun getSupplementalAction3Drawable(): Drawable? = supplementalAction3?.drawable
 
-    private fun setSupplementalAction3Drawable(@DrawableRes drawableRes: Int?) {
+    private fun setSupplementalAction3Drawable(
+        @DrawableRes drawableRes: Int?,
+    ) {
         supplementalAction3?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
         drawableRes?.let { supplementalAction3?.setImageResource(drawableRes) }
     }

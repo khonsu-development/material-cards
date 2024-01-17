@@ -26,7 +26,6 @@ import eu.khonsu.libraries.materialcards.extensions.show
  */
 @Suppress("MemberVisibilityCanBePrivate", "unused")
 class CardView4(context: Context, attrs: AttributeSet) : CardView(context, attrs) {
-
     var constraintLayout: ConstraintLayout? = null
     var image: ImageView? = null
     var title: TextView? = null
@@ -37,7 +36,10 @@ class CardView4(context: Context, attrs: AttributeSet) : CardView(context, attrs
     var actionButton2: Button? = null
     var actionButton3: Button? = null
 
-    private fun init(context: Context, attrs: AttributeSet) {
+    private fun init(
+        context: Context,
+        attrs: AttributeSet,
+    ) {
         View.inflate(context, R.layout.card_view_4, this)
         initComponents()
         setTitleText("")
@@ -58,31 +60,37 @@ class CardView4(context: Context, attrs: AttributeSet) : CardView(context, attrs
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CardView4)
         for (index in 0 until typedArray.indexCount) {
             when (val attr = typedArray.getIndex(index)) {
-                R.styleable.CardView4_cv4_srcImage -> setImageSrc(
-                    typedArray.getResourceId(attr, R.drawable.background_image),
-                )
+                R.styleable.CardView4_cv4_srcImage ->
+                    setImageSrc(
+                        typedArray.getResourceId(attr, R.drawable.background_image),
+                    )
 
-                R.styleable.CardView4_cv4_srcImageTint -> setImageSrcTint(
-                    typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
-                )
+                R.styleable.CardView4_cv4_srcImageTint ->
+                    setImageSrcTint(
+                        typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
+                    )
 
                 R.styleable.CardView4_cv4_title -> setTitleText(typedArray.getString(attr))
                 R.styleable.CardView4_cv4_subtitle -> setSubtitleText(typedArray.getString(attr))
-                R.styleable.CardView4_cv4_supportingText -> setSupportingText(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView4_cv4_supportingText ->
+                    setSupportingText(
+                        typedArray.getString(attr),
+                    )
 
-                R.styleable.CardView4_cv4_action1Text -> setAction1Text(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView4_cv4_action1Text ->
+                    setAction1Text(
+                        typedArray.getString(attr),
+                    )
 
-                R.styleable.CardView4_cv4_action2Text -> setAction2Text(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView4_cv4_action2Text ->
+                    setAction2Text(
+                        typedArray.getString(attr),
+                    )
 
-                R.styleable.CardView4_cv4_action3Text -> setAction3Text(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView4_cv4_action3Text ->
+                    setAction3Text(
+                        typedArray.getString(attr),
+                    )
             }
         }
         typedArray.recycle()
@@ -104,13 +112,17 @@ class CardView4(context: Context, attrs: AttributeSet) : CardView(context, attrs
 
     fun getImageSrc(): Drawable? = image?.drawable
 
-    fun setImageSrc(@DrawableRes value: Int) {
+    fun setImageSrc(
+        @DrawableRes value: Int,
+    ) {
         image?.setImageResource(value)
     }
 
     fun getImageSrcTint(): ColorStateList? = image?.imageTintList
 
-    fun setImageSrcTint(@ColorRes tintRes: Int?) {
+    fun setImageSrcTint(
+        @ColorRes tintRes: Int?,
+    ) {
         tintRes?.let {
             image?.let { imageView ->
                 ImageViewCompat.setImageTintList(

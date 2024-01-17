@@ -23,7 +23,6 @@ import eu.khonsu.libraries.materialcards.extensions.hideIf
  */
 @Suppress("MemberVisibilityCanBePrivate", "unused")
 class CardView9(context: Context, attrs: AttributeSet) : CardView(context, attrs) {
-
     var constraintLayout: ConstraintLayout? = null
     var title: TextView? = null
     var subtitle: TextView? = null
@@ -33,7 +32,10 @@ class CardView9(context: Context, attrs: AttributeSet) : CardView(context, attrs
     var actionButton2: Button? = null
     var actionButton3: Button? = null
 
-    private fun init(context: Context, attrs: AttributeSet) {
+    private fun init(
+        context: Context,
+        attrs: AttributeSet,
+    ) {
         View.inflate(context, R.layout.card_view_9, this)
         initComponents()
         setTitleText("")
@@ -47,29 +49,35 @@ class CardView9(context: Context, attrs: AttributeSet) : CardView(context, attrs
             when (val attr = typedArray.getIndex(index)) {
                 R.styleable.CardView9_cv9_title -> setTitleText(typedArray.getString(attr))
                 R.styleable.CardView9_cv9_subtitle -> setSubtitleText(typedArray.getString(attr))
-                R.styleable.CardView9_cv9_supportingText -> setSupportingText(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView9_cv9_supportingText ->
+                    setSupportingText(
+                        typedArray.getString(attr),
+                    )
 
-                R.styleable.CardView9_cv9_srcImage -> setImageSrc(
-                    typedArray.getResourceId(attr, R.drawable.background_image),
-                )
+                R.styleable.CardView9_cv9_srcImage ->
+                    setImageSrc(
+                        typedArray.getResourceId(attr, R.drawable.background_image),
+                    )
 
-                R.styleable.CardView9_cv9_srcImageTint -> setImageSrcTint(
-                    typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
-                )
+                R.styleable.CardView9_cv9_srcImageTint ->
+                    setImageSrcTint(
+                        typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
+                    )
 
-                R.styleable.CardView9_cv9_action1Text -> setAction1Text(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView9_cv9_action1Text ->
+                    setAction1Text(
+                        typedArray.getString(attr),
+                    )
 
-                R.styleable.CardView9_cv9_action2Text -> setAction2Text(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView9_cv9_action2Text ->
+                    setAction2Text(
+                        typedArray.getString(attr),
+                    )
 
-                R.styleable.CardView9_cv9_action3Text -> setAction3Text(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView9_cv9_action3Text ->
+                    setAction3Text(
+                        typedArray.getString(attr),
+                    )
             }
         }
         typedArray.recycle()
@@ -108,13 +116,17 @@ class CardView9(context: Context, attrs: AttributeSet) : CardView(context, attrs
 
     fun getImageSrc(): Drawable? = image?.drawable
 
-    fun setImageSrc(@DrawableRes value: Int) {
+    fun setImageSrc(
+        @DrawableRes value: Int,
+    ) {
         image?.setImageResource(value)
     }
 
     fun getImageSrcTint(): ColorStateList? = image?.imageTintList
 
-    fun setImageSrcTint(@ColorRes tintRes: Int?) {
+    fun setImageSrcTint(
+        @ColorRes tintRes: Int?,
+    ) {
         tintRes?.let {
             image?.let { imageView ->
                 ImageViewCompat.setImageTintList(

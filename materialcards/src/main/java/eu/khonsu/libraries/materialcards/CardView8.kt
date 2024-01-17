@@ -23,7 +23,6 @@ import eu.khonsu.libraries.materialcards.extensions.hideIf
  */
 @Suppress("MemberVisibilityCanBePrivate", "unused")
 class CardView8(context: Context, attrs: AttributeSet) : CardView(context, attrs) {
-
     var constraintLayout: ConstraintLayout? = null
     var title: TextView? = null
     var subtitle: TextView? = null
@@ -33,7 +32,10 @@ class CardView8(context: Context, attrs: AttributeSet) : CardView(context, attrs
     var actionButton2: Button? = null
     var actionButton3: Button? = null
 
-    private fun init(context: Context, attrs: AttributeSet) {
+    private fun init(
+        context: Context,
+        attrs: AttributeSet,
+    ) {
         View.inflate(context, R.layout.card_view_8, this)
         initComponents()
         setTitleText("")
@@ -47,43 +49,51 @@ class CardView8(context: Context, attrs: AttributeSet) : CardView(context, attrs
             when (val attr = typedArray.getIndex(index)) {
                 R.styleable.CardView8_cv8_title -> setTitleText(typedArray.getString(attr))
                 R.styleable.CardView8_cv8_subtitle -> setSubtitleText(typedArray.getString(attr))
-                R.styleable.CardView8_cv8_supportingText -> setSupportingText(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView8_cv8_supportingText ->
+                    setSupportingText(
+                        typedArray.getString(attr),
+                    )
 
-                R.styleable.CardView8_cv8_srcImage -> setImageSrc(
-                    typedArray.getResourceId(attr, R.drawable.background_image),
-                )
+                R.styleable.CardView8_cv8_srcImage ->
+                    setImageSrc(
+                        typedArray.getResourceId(attr, R.drawable.background_image),
+                    )
 
-                R.styleable.CardView8_cv8_srcImageTint -> setSrcDrawableTint(
-                    typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
-                )
+                R.styleable.CardView8_cv8_srcImageTint ->
+                    setSrcDrawableTint(
+                        typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
+                    )
 
-                R.styleable.CardView8b_cv8b_imageHeight -> setImageHeight(
-                    typedArray.getDimensionPixelSize(
-                        attr,
-                        resources.getDimensionPixelSize(R.dimen.image_default_size),
-                    ),
-                )
+                R.styleable.CardView8b_cv8b_imageHeight ->
+                    setImageHeight(
+                        typedArray.getDimensionPixelSize(
+                            attr,
+                            resources.getDimensionPixelSize(R.dimen.image_default_size),
+                        ),
+                    )
 
-                R.styleable.CardView8b_cv8b_imageWidth -> setImageWidth(
-                    typedArray.getDimensionPixelSize(
-                        attr,
-                        resources.getDimensionPixelSize(R.dimen.image_default_size),
-                    ),
-                )
+                R.styleable.CardView8b_cv8b_imageWidth ->
+                    setImageWidth(
+                        typedArray.getDimensionPixelSize(
+                            attr,
+                            resources.getDimensionPixelSize(R.dimen.image_default_size),
+                        ),
+                    )
 
-                R.styleable.CardView8_cv8_action1Text -> setAction1Text(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView8_cv8_action1Text ->
+                    setAction1Text(
+                        typedArray.getString(attr),
+                    )
 
-                R.styleable.CardView8_cv8_action2Text -> setAction2Text(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView8_cv8_action2Text ->
+                    setAction2Text(
+                        typedArray.getString(attr),
+                    )
 
-                R.styleable.CardView8_cv8_action3Text -> setAction3Text(
-                    typedArray.getString(attr),
-                )
+                R.styleable.CardView8_cv8_action3Text ->
+                    setAction3Text(
+                        typedArray.getString(attr),
+                    )
             }
         }
         typedArray.recycle()
@@ -122,13 +132,17 @@ class CardView8(context: Context, attrs: AttributeSet) : CardView(context, attrs
 
     fun getImageSrc(): Drawable? = image?.drawable
 
-    fun setImageSrc(@DrawableRes value: Int) {
+    fun setImageSrc(
+        @DrawableRes value: Int,
+    ) {
         image?.setImageResource(value)
     }
 
     fun getSrcDrawableTint(): ColorStateList? = image?.imageTintList
 
-    fun setSrcDrawableTint(@ColorRes tintRes: Int?) {
+    fun setSrcDrawableTint(
+        @ColorRes tintRes: Int?,
+    ) {
         tintRes?.let {
             image?.let { imageView ->
                 ImageViewCompat.setImageTintList(
