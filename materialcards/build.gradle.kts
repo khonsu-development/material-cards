@@ -9,7 +9,7 @@ group = "eu.khonsu.libraries"
 version = "1.1-SNAPSHOT"
 
 android {
-    compileSdk = 31
+    compileSdk = 34
     namespace = "eu.khonsu.libraries.materialcards"
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
