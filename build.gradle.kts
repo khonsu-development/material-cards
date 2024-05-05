@@ -22,7 +22,7 @@ allprojects {
 }
 
 tasks.register<Delete>("clean").configure {
-    delete(rootProject.buildDir)
+    delete(getLayout().buildDirectory)
 }
 
 val materialVersion = "1.2.1"
