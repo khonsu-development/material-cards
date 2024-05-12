@@ -1,26 +1,19 @@
-name: On Push CI
+name: Build
 
-on:
-  push:
-    branches:
-      - '*'
+on: [ push ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout sources
         uses: actions/checkout@v4
-
-      - name: Set up JDK 17
+      - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: corretto
           java-version: 17
-
-      - name: Grant rights
-        run: chmod +x build.gradle.kts gradlew gradle
-
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v3
       - name: Build with Gradle
-        id: build
         run: ./gradlew clean build
