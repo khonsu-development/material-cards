@@ -13,6 +13,7 @@ import androidx.annotation.DrawableRes
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.core.content.withStyledAttributes
 import androidx.core.widget.ImageViewCompat
 import eu.khonsu.libraries.materialcards.extensions.hideIf
 
@@ -22,7 +23,10 @@ import eu.khonsu.libraries.materialcards.extensions.hideIf
  * @see [](http://eugenebrusov.com/using-of-constraintlayout-to-build-out-cardview-3-of-3/)
  */
 @Suppress("MemberVisibilityCanBePrivate", "unused")
-class CardView10(context: Context, attrs: AttributeSet) : CardView(context, attrs) {
+class CardView10(
+    context: Context,
+    attrs: AttributeSet,
+) : CardView(context, attrs) {
     var constraintLayout: ConstraintLayout? = null
     var title: TextView? = null
     var subtitle: TextView? = null
@@ -44,43 +48,43 @@ class CardView10(context: Context, attrs: AttributeSet) : CardView(context, attr
         setAction1Text("")
         setAction2Text("")
         setAction3Text("")
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CardView10)
-        for (index in 0 until typedArray.indexCount) {
-            when (val attr = typedArray.getIndex(index)) {
-                R.styleable.CardView10_cv10_title -> setTitleText(typedArray.getString(attr))
-                R.styleable.CardView10_cv10_subtitle -> setSubtitleText(typedArray.getString(attr))
-                R.styleable.CardView10_cv10_supportingText ->
-                    setSupportingText(
-                        typedArray.getString(attr),
-                    )
+        context.withStyledAttributes(attrs, R.styleable.CardView10) {
+            for (index in 0 until indexCount) {
+                when (val attr = getIndex(index)) {
+                    R.styleable.CardView10_cv10_title -> setTitleText(getString(attr))
+                    R.styleable.CardView10_cv10_subtitle -> setSubtitleText(getString(attr))
+                    R.styleable.CardView10_cv10_supportingText ->
+                        setSupportingText(
+                            getString(attr),
+                        )
 
-                R.styleable.CardView10_cv10_srcImage ->
-                    setImageSrc(
-                        typedArray.getResourceId(attr, R.drawable.background_image),
-                    )
+                    R.styleable.CardView10_cv10_srcImage ->
+                        setImageSrc(
+                            getResourceId(attr, R.drawable.background_image),
+                        )
 
-                R.styleable.CardView10_cv10_srcImageTint ->
-                    setImageSrcTint(
-                        typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
-                    )
+                    R.styleable.CardView10_cv10_srcImageTint ->
+                        setImageSrcTint(
+                            getResourceId(attr, android.R.attr.colorControlHighlight),
+                        )
 
-                R.styleable.CardView10_cv10_action1Text ->
-                    setAction1Text(
-                        typedArray.getString(attr),
-                    )
+                    R.styleable.CardView10_cv10_action1Text ->
+                        setAction1Text(
+                            getString(attr),
+                        )
 
-                R.styleable.CardView10_cv10_action2Text ->
-                    setAction2Text(
-                        typedArray.getString(attr),
-                    )
+                    R.styleable.CardView10_cv10_action2Text ->
+                        setAction2Text(
+                            getString(attr),
+                        )
 
-                R.styleable.CardView10_cv10_action3Text ->
-                    setAction3Text(
-                        typedArray.getString(attr),
-                    )
+                    R.styleable.CardView10_cv10_action3Text ->
+                        setAction3Text(
+                            getString(attr),
+                        )
+                }
             }
         }
-        typedArray.recycle()
     }
 
     private fun initComponents() {

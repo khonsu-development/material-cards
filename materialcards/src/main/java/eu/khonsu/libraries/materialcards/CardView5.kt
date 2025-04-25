@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.withStyledAttributes
 import eu.khonsu.libraries.materialcards.extensions.hideIf
 
 /**
@@ -18,7 +19,10 @@ import eu.khonsu.libraries.materialcards.extensions.hideIf
  * @see [](http://eugenebrusov.com/using-of-constraintlayout-to-build-out-cardview-2-of-3/)
  */
 @Suppress("MemberVisibilityCanBePrivate", "unused")
-class CardView5(context: Context, attrs: AttributeSet) : CardView(context, attrs) {
+class CardView5(
+    context: Context,
+    attrs: AttributeSet,
+) : CardView(context, attrs) {
     var constraintLayout: ConstraintLayout? = null
     var title: TextView? = null
     var subtitle: TextView? = null
@@ -43,43 +47,43 @@ class CardView5(context: Context, attrs: AttributeSet) : CardView(context, attrs
         setSupplementalAction1Drawable(0)
         setSupplementalAction2Drawable(0)
         setSupplementalAction3Drawable(0)
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CardView5)
-        for (index in 0 until typedArray.indexCount) {
-            when (val attr = typedArray.getIndex(index)) {
-                R.styleable.CardView5_cv5_title -> setTitleText(typedArray.getString(attr))
-                R.styleable.CardView5_cv5_subtitle -> setSubtitleText(typedArray.getString(attr))
-                R.styleable.CardView5_cv5_supportingText ->
-                    setSupportingText(
-                        typedArray.getString(attr),
-                    )
+        context.withStyledAttributes(attrs, R.styleable.CardView5) {
+            for (index in 0 until indexCount) {
+                when (val attr = getIndex(index)) {
+                    R.styleable.CardView5_cv5_title -> setTitleText(getString(attr))
+                    R.styleable.CardView5_cv5_subtitle -> setSubtitleText(getString(attr))
+                    R.styleable.CardView5_cv5_supportingText ->
+                        setSupportingText(
+                            getString(attr),
+                        )
 
-                R.styleable.CardView5_cv5_action1Text ->
-                    setAction1Text(
-                        typedArray.getString(attr),
-                    )
+                    R.styleable.CardView5_cv5_action1Text ->
+                        setAction1Text(
+                            getString(attr),
+                        )
 
-                R.styleable.CardView5_cv5_action2Text ->
-                    setAction2Text(
-                        typedArray.getString(attr),
-                    )
+                    R.styleable.CardView5_cv5_action2Text ->
+                        setAction2Text(
+                            getString(attr),
+                        )
 
-                R.styleable.CardView5_cv5_supplementalAction1Drawable ->
-                    setSupplementalAction1Drawable(
-                        typedArray.getResourceId(attr, R.drawable.ic_star_outline),
-                    )
+                    R.styleable.CardView5_cv5_supplementalAction1Drawable ->
+                        setSupplementalAction1Drawable(
+                            getResourceId(attr, R.drawable.ic_star_outline),
+                        )
 
-                R.styleable.CardView5_cv5_supplementalAction2Drawable ->
-                    setSupplementalAction2Drawable(
-                        typedArray.getResourceId(attr, R.drawable.ic_star_outline),
-                    )
+                    R.styleable.CardView5_cv5_supplementalAction2Drawable ->
+                        setSupplementalAction2Drawable(
+                            getResourceId(attr, R.drawable.ic_star_outline),
+                        )
 
-                R.styleable.CardView5_cv5_supplementalAction3Drawable ->
-                    setSupplementalAction3Drawable(
-                        typedArray.getResourceId(attr, R.drawable.ic_star_outline),
-                    )
+                    R.styleable.CardView5_cv5_supplementalAction3Drawable ->
+                        setSupplementalAction3Drawable(
+                            getResourceId(attr, R.drawable.ic_star_outline),
+                        )
+                }
             }
         }
-        typedArray.recycle()
     }
 
     private fun initComponents() {

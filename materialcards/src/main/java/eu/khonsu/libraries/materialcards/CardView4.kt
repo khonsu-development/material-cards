@@ -14,6 +14,7 @@ import androidx.annotation.DrawableRes
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.core.content.withStyledAttributes
 import androidx.core.widget.ImageViewCompat
 import eu.khonsu.libraries.materialcards.extensions.hide
 import eu.khonsu.libraries.materialcards.extensions.hideIf
@@ -25,7 +26,10 @@ import eu.khonsu.libraries.materialcards.extensions.show
  * @see [](http://eugenebrusov.com/using-of-constraintlayout-to-build-out-cardview-2-of-3/)
  */
 @Suppress("MemberVisibilityCanBePrivate", "unused")
-class CardView4(context: Context, attrs: AttributeSet) : CardView(context, attrs) {
+class CardView4(
+    context: Context,
+    attrs: AttributeSet,
+) : CardView(context, attrs) {
     var constraintLayout: ConstraintLayout? = null
     var image: ImageView? = null
     var title: TextView? = null
@@ -57,43 +61,43 @@ class CardView4(context: Context, attrs: AttributeSet) : CardView(context, attrs
                 expandButton?.setImageResource(R.drawable.ic_expand_less)
             }
         }
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CardView4)
-        for (index in 0 until typedArray.indexCount) {
-            when (val attr = typedArray.getIndex(index)) {
-                R.styleable.CardView4_cv4_srcImage ->
-                    setImageSrc(
-                        typedArray.getResourceId(attr, R.drawable.background_image),
-                    )
+        context.withStyledAttributes(attrs, R.styleable.CardView4) {
+            for (index in 0 until indexCount) {
+                when (val attr = getIndex(index)) {
+                    R.styleable.CardView4_cv4_srcImage ->
+                        setImageSrc(
+                            getResourceId(attr, R.drawable.background_image),
+                        )
 
-                R.styleable.CardView4_cv4_srcImageTint ->
-                    setImageSrcTint(
-                        typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
-                    )
+                    R.styleable.CardView4_cv4_srcImageTint ->
+                        setImageSrcTint(
+                            getResourceId(attr, android.R.attr.colorControlHighlight),
+                        )
 
-                R.styleable.CardView4_cv4_title -> setTitleText(typedArray.getString(attr))
-                R.styleable.CardView4_cv4_subtitle -> setSubtitleText(typedArray.getString(attr))
-                R.styleable.CardView4_cv4_supportingText ->
-                    setSupportingText(
-                        typedArray.getString(attr),
-                    )
+                    R.styleable.CardView4_cv4_title -> setTitleText(getString(attr))
+                    R.styleable.CardView4_cv4_subtitle -> setSubtitleText(getString(attr))
+                    R.styleable.CardView4_cv4_supportingText ->
+                        setSupportingText(
+                            getString(attr),
+                        )
 
-                R.styleable.CardView4_cv4_action1Text ->
-                    setAction1Text(
-                        typedArray.getString(attr),
-                    )
+                    R.styleable.CardView4_cv4_action1Text ->
+                        setAction1Text(
+                            getString(attr),
+                        )
 
-                R.styleable.CardView4_cv4_action2Text ->
-                    setAction2Text(
-                        typedArray.getString(attr),
-                    )
+                    R.styleable.CardView4_cv4_action2Text ->
+                        setAction2Text(
+                            getString(attr),
+                        )
 
-                R.styleable.CardView4_cv4_action3Text ->
-                    setAction3Text(
-                        typedArray.getString(attr),
-                    )
+                    R.styleable.CardView4_cv4_action3Text ->
+                        setAction3Text(
+                            getString(attr),
+                        )
+                }
             }
         }
-        typedArray.recycle()
         supportingText?.hide()
         expandButton?.setImageResource(R.drawable.ic_expand_more)
     }

@@ -7,6 +7,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.withStyledAttributes
 import eu.khonsu.libraries.materialcards.extensions.hide
 import eu.khonsu.libraries.materialcards.extensions.hideIf
 import eu.khonsu.libraries.materialcards.extensions.show
@@ -15,7 +16,10 @@ import eu.khonsu.libraries.materialcards.extensions.show
  * Primary text, subtext, supporting text and expand button.
  */
 @Suppress("MemberVisibilityCanBePrivate", "unused")
-class CardView12(context: Context, attrs: AttributeSet) : CardView(context, attrs) {
+class CardView12(
+    context: Context,
+    attrs: AttributeSet,
+) : CardView(context, attrs) {
     var constraintLayout: ConstraintLayout? = null
     var title: TextView? = null
     var subtitle: TextView? = null
@@ -40,18 +44,18 @@ class CardView12(context: Context, attrs: AttributeSet) : CardView(context, attr
                 expandButton?.setImageResource(R.drawable.ic_expand_less)
             }
         }
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CardView12)
-        for (index in 0 until typedArray.indexCount) {
-            when (val attr = typedArray.getIndex(index)) {
-                R.styleable.CardView12_cv12_title -> setTitleText(typedArray.getString(attr))
-                R.styleable.CardView12_cv12_subtitle -> setSubtitleText(typedArray.getString(attr))
-                R.styleable.CardView12_cv12_supportingText ->
-                    setSupportingText(
-                        typedArray.getString(attr),
-                    )
+        context.withStyledAttributes(attrs, R.styleable.CardView12) {
+            for (index in 0 until indexCount) {
+                when (val attr = getIndex(index)) {
+                    R.styleable.CardView12_cv12_title -> setTitleText(getString(attr))
+                    R.styleable.CardView12_cv12_subtitle -> setSubtitleText(getString(attr))
+                    R.styleable.CardView12_cv12_supportingText ->
+                        setSupportingText(
+                            getString(attr),
+                        )
+                }
             }
         }
-        typedArray.recycle()
         supportingText?.hide()
         expandButton?.setImageResource(R.drawable.ic_expand_more)
     }

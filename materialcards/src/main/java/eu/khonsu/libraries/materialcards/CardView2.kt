@@ -14,6 +14,7 @@ import androidx.annotation.DrawableRes
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.core.content.withStyledAttributes
 import androidx.core.widget.ImageViewCompat
 import eu.khonsu.libraries.materialcards.extensions.hideIf
 
@@ -23,7 +24,10 @@ import eu.khonsu.libraries.materialcards.extensions.hideIf
  * @see [](http://eugenebrusov.com/cardview-with-constraintlayout/)
  */
 @Suppress("MemberVisibilityCanBePrivate", "unused")
-class CardView2(context: Context, attrs: AttributeSet) : CardView(context, attrs) {
+class CardView2(
+    context: Context,
+    attrs: AttributeSet,
+) : CardView(context, attrs) {
     var constraintLayout: ConstraintLayout? = null
     var avatarImage: ImageView? = null
     var title: TextView? = null
@@ -52,68 +56,68 @@ class CardView2(context: Context, attrs: AttributeSet) : CardView(context, attrs
         setSupplementalAction1Drawable(0)
         setSupplementalAction2Drawable(0)
         setSupplementalAction3Drawable(0)
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CardView2)
-        for (index in 0 until typedArray.indexCount) {
-            when (val attr = typedArray.getIndex(index)) {
-                R.styleable.CardView2_cv2_avatarImage ->
-                    setAvatarDrawable(
-                        typedArray.getResourceId(attr, R.drawable.ic_avatar),
-                    )
+        context.withStyledAttributes(attrs, R.styleable.CardView2) {
+            for (index in 0 until indexCount) {
+                when (val attr = getIndex(index)) {
+                    R.styleable.CardView2_cv2_avatarImage ->
+                        setAvatarDrawable(
+                            getResourceId(attr, R.drawable.ic_avatar),
+                        )
 
-                R.styleable.CardView2_cv2_avatarImageTint ->
-                    setAvatarDrawableTint(
-                        typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
-                    )
+                    R.styleable.CardView2_cv2_avatarImageTint ->
+                        setAvatarDrawableTint(
+                            getResourceId(attr, android.R.attr.colorControlHighlight),
+                        )
 
-                R.styleable.CardView2_cv2_title -> setTitleText(typedArray.getString(attr))
-                R.styleable.CardView2_cv2_subtitle -> setSubtitleText(typedArray.getString(attr))
-                R.styleable.CardView2_cv2_srcImage ->
-                    setImageSrc(
-                        typedArray.getResourceId(attr, R.drawable.background_image),
-                    )
+                    R.styleable.CardView2_cv2_title -> setTitleText(getString(attr))
+                    R.styleable.CardView2_cv2_subtitle -> setSubtitleText(getString(attr))
+                    R.styleable.CardView2_cv2_srcImage ->
+                        setImageSrc(
+                            getResourceId(attr, R.drawable.background_image),
+                        )
 
-                R.styleable.CardView2_cv2_srcImageTint ->
-                    setImageSrcTint(
-                        typedArray.getResourceId(attr, android.R.attr.colorControlHighlight),
-                    )
+                    R.styleable.CardView2_cv2_srcImageTint ->
+                        setImageSrcTint(
+                            getResourceId(attr, android.R.attr.colorControlHighlight),
+                        )
 
-                R.styleable.CardView2_cv2_supportingText ->
-                    setSupportingText(
-                        typedArray.getString(attr),
-                    )
+                    R.styleable.CardView2_cv2_supportingText ->
+                        setSupportingText(
+                            getString(attr),
+                        )
 
-                R.styleable.CardView2_cv2_action1Text ->
-                    setAction1Text(
-                        typedArray.getString(attr),
-                    )
+                    R.styleable.CardView2_cv2_action1Text ->
+                        setAction1Text(
+                            getString(attr),
+                        )
 
-                R.styleable.CardView2_cv2_action2Text ->
-                    setAction2Text(
-                        typedArray.getString(attr),
-                    )
+                    R.styleable.CardView2_cv2_action2Text ->
+                        setAction2Text(
+                            getString(attr),
+                        )
 
-                R.styleable.CardView2_cv2_action3Text ->
-                    setAction3Text(
-                        typedArray.getString(attr),
-                    )
+                    R.styleable.CardView2_cv2_action3Text ->
+                        setAction3Text(
+                            getString(attr),
+                        )
 
-                R.styleable.CardView2_cv2_supplementalAction1Drawable ->
-                    setSupplementalAction1Drawable(
-                        typedArray.getResourceId(attr, R.drawable.ic_star_outline),
-                    )
+                    R.styleable.CardView2_cv2_supplementalAction1Drawable ->
+                        setSupplementalAction1Drawable(
+                            getResourceId(attr, R.drawable.ic_star_outline),
+                        )
 
-                R.styleable.CardView2_cv2_supplementalAction2Drawable ->
-                    setSupplementalAction2Drawable(
-                        typedArray.getResourceId(attr, R.drawable.ic_star_outline),
-                    )
+                    R.styleable.CardView2_cv2_supplementalAction2Drawable ->
+                        setSupplementalAction2Drawable(
+                            getResourceId(attr, R.drawable.ic_star_outline),
+                        )
 
-                R.styleable.CardView2_cv2_supplementalAction3Drawable ->
-                    setSupplementalAction3Drawable(
-                        typedArray.getResourceId(attr, R.drawable.ic_star_outline),
-                    )
+                    R.styleable.CardView2_cv2_supplementalAction3Drawable ->
+                        setSupplementalAction3Drawable(
+                            getResourceId(attr, R.drawable.ic_star_outline),
+                        )
+                }
             }
         }
-        typedArray.recycle()
     }
 
     private fun initComponents() {
