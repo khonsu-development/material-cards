@@ -15,9 +15,8 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = "17"
-        freeCompilerArgs = freeCompilerArgs + listOf("-Xjvm-default=all-compatibility")
+    kotlin {
+        jvmToolchain(17)
     }
     defaultConfig {
         minSdk = 21
