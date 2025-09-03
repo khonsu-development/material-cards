@@ -11,6 +11,9 @@ version = "1.1-SNAPSHOT"
 android {
     compileSdk = 36
     namespace = "eu.khonsu.libraries.materialcards"
+    publishing {
+        singleVariant("release") {}
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
