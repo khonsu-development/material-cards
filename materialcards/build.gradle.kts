@@ -1,7 +1,7 @@
 plugins {
     id("com.android.library")
-    id("org.jetbrains.kotlin.android") version "2.3.20"
-    id("org.jlleitschuh.gradle.ktlint") version "14.2.0"
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ktlint)
     id("maven-publish")
 }
 
@@ -38,12 +38,7 @@ configurations {
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.18.0")
-    implementation("androidx.appcompat:appcompat:1.7.1")
-
-    // Design elements
-    implementation("androidx.constraintlayout:constraintlayout:2.2.1")
-    implementation("com.google.android.material:material:1.13.0")
+    implementation(libs.bundles.androidx.ui)
 }
 
 publishing {

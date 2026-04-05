@@ -1,0 +1,29 @@
+[versions]
+agp = "8.12.3"
+kotlin = "2.3.20"
+ktlint = "14.2.0"
+
+androidx-core-ktx = "1.18.0"
+androidx-appcompat = "1.7.1"
+androidx-constraintlayout = "2.2.1"
+google-material = "1.13.0"
+
+[libraries]
+android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidx-constraintlayout" }
+google-material = { group = "com.google.android.material", name = "material", version.ref = "google-material" }
+
+[bundles]
+androidx-ui = [
+    "androidx-core-ktx",
+    "androidx-appcompat",
+    "androidx-constraintlayout",
+    "google-material",
+]
+
+[plugins]
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
