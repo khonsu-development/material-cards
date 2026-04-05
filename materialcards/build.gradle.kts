@@ -1,6 +1,5 @@
 plugins {
-    id("com.android.library")
-    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.ktlint)
     id("maven-publish")
 }
