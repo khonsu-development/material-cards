@@ -64,7 +64,7 @@ class CardView8(
                         )
 
                     R.styleable.CardView8_cv8_srcImageTint ->
-                        setSrcDrawableTint(
+                        setImageSrcTint(
                             getResourceId(attr, android.R.attr.colorControlHighlight),
                         )
 
@@ -142,9 +142,9 @@ class CardView8(
         image?.setImageResource(value)
     }
 
-    fun getSrcDrawableTint(): ColorStateList? = image?.imageTintList
+    fun getImageSrcTint(): ColorStateList? = image?.imageTintList
 
-    fun setSrcDrawableTint(
+    fun setImageSrcTint(
         @ColorRes tintRes: Int?,
     ) {
         tintRes?.let {
