@@ -1,3 +1,7 @@
 # Shell scripts must use LF line endings so they work on all platforms.
 gradlew text eol=lf
 *.sh text eol=lf
+
+# IntelliJ/Android Studio XML under .idea: store LF in Git to avoid CRLF/LF churn on Windows.
+.idea/*.xml text eol=lf
+.idea/**/*.xml text eol=lf
