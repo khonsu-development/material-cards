@@ -68,7 +68,7 @@ class CardView8(
                             getResourceId(attr, android.R.attr.colorControlHighlight),
                         )
 
-                    R.styleable.CardView8b_cv8b_imageHeight ->
+                    R.styleable.CardView8_cv8_imageHeight ->
                         setImageHeight(
                             getDimensionPixelSize(
                                 attr,
@@ -76,7 +76,7 @@ class CardView8(
                             ),
                         )
 
-                    R.styleable.CardView8b_cv8b_imageWidth ->
+                    R.styleable.CardView8_cv8_imageWidth ->
                         setImageWidth(
                             getDimensionPixelSize(
                                 attr,
