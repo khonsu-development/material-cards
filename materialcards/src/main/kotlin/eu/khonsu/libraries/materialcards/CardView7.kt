@@ -153,7 +153,7 @@ class CardView7(
     private fun setSupplementalAction1Drawable(
         @DrawableRes drawableRes: Int?,
     ) {
-        supplementalAction1?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
+        supplementalAction1?.hideIf(drawableRes == null || drawableRes == 0)
         drawableRes?.let { supplementalAction1?.setImageResource(drawableRes) }
     }
 
@@ -162,7 +162,7 @@ class CardView7(
     private fun setSupplementalAction2Drawable(
         @DrawableRes drawableRes: Int?,
     ) {
-        supplementalAction2?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
+        supplementalAction2?.hideIf(drawableRes == null || drawableRes == 0)
         drawableRes?.let { supplementalAction2?.setImageResource(drawableRes) }
     }
 
@@ -171,7 +171,7 @@ class CardView7(
     private fun setSupplementalAction3Drawable(
         @DrawableRes drawableRes: Int?,
     ) {
-        supplementalAction3?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
+        supplementalAction3?.hideIf(drawableRes == null || drawableRes == 0)
         drawableRes?.let { supplementalAction3?.setImageResource(drawableRes) }
     }
 

@@ -109,7 +109,7 @@ class CardView6(
     private fun setActionButton1Drawable(
         @DrawableRes drawableRes: Int?,
     ) {
-        actionButton1?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
+        actionButton1?.hideIf(drawableRes == null || drawableRes == 0)
         drawableRes?.let { actionButton1?.setImageResource(drawableRes) }
     }
 
@@ -118,7 +118,7 @@ class CardView6(
     private fun setActionButton2Drawable(
         @DrawableRes drawableRes: Int?,
     ) {
-        actionButton2?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
+        actionButton2?.hideIf(drawableRes == null || drawableRes == 0)
         drawableRes?.let { actionButton2?.setImageResource(drawableRes) }
     }
 
@@ -127,7 +127,7 @@ class CardView6(
     private fun setActionButton3Drawable(
         @DrawableRes drawableRes: Int?,
     ) {
-        actionButton3?.hideIf(drawableRes == null || drawableRes.toString().isBlank())
+        actionButton3?.hideIf(drawableRes == null || drawableRes == 0)
         drawableRes?.let { actionButton3?.setImageResource(drawableRes) }
     }
 
