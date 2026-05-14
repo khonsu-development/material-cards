@@ -5,7 +5,7 @@ ktlint = "14.2.0"
 androidx-core-ktx = "1.18.0"
 androidx-appcompat = "1.7.1"
 androidx-constraintlayout = "2.2.1"
-google-material = "1.13.0"
+google-material = "1.14.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }
