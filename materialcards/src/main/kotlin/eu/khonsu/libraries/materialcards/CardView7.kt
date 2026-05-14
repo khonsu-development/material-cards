@@ -125,13 +125,13 @@ class CardView7(
     fun getTitleText(): CharSequence? = title?.text
 
     fun setTitleText(value: CharSequence?) {
-        title!!.text = value
+        title?.text = value
     }
 
     fun getSubtitleText(): CharSequence? = subtitle?.text
 
     fun setSubtitleText(value: CharSequence?) {
-        subtitle!!.text = value
+        subtitle?.text = value
     }
 
     fun getAction1Text(): CharSequence? = action1?.text
