@@ -26,16 +26,6 @@ android {
     }
 }
 
-configurations {
-    compileOnly {
-        extendsFrom(configurations.annotationProcessor.get())
-    }
-    all {
-        exclude("httpclient")
-        exclude("commons-logging")
-    }
-}
-
 dependencies {
     implementation(libs.bundles.androidx.ui)
 }
