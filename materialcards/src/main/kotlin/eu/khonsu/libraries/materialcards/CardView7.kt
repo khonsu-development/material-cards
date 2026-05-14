@@ -32,8 +32,8 @@ class CardView7(
     var image: ImageView? = null
     var title: TextView? = null
     var subtitle: TextView? = null
-    var action1: Button? = null
-    var action2: Button? = null
+    var actionButton1: Button? = null
+    var actionButton2: Button? = null
     var supplementalAction1: ImageButton? = null
     var supplementalAction2: ImageButton? = null
     var supplementalAction3: ImageButton? = null
@@ -92,8 +92,8 @@ class CardView7(
         image = findViewById(R.id.image)
         title = findViewById(R.id.title)
         subtitle = findViewById(R.id.subtitle)
-        action1 = findViewById(R.id.action_button_1)
-        action2 = findViewById(R.id.action_button_2)
+        actionButton1 = findViewById(R.id.action_button_1)
+        actionButton2 = findViewById(R.id.action_button_2)
         supplementalAction1 = findViewById(R.id.supplemental_action_1)
         supplementalAction2 = findViewById(R.id.supplemental_action_2)
         supplementalAction3 = findViewById(R.id.supplemental_action_3)
@@ -134,18 +134,18 @@ class CardView7(
         subtitle?.text = value
     }
 
-    fun getAction1Text(): CharSequence? = action1?.text
+    fun getAction1Text(): CharSequence? = actionButton1?.text
 
     fun setAction1Text(value: CharSequence?) {
-        action1?.hideIf(value.toString().isBlank())
-        action1?.text = value
+        actionButton1?.hideIf(value.toString().isBlank())
+        actionButton1?.text = value
     }
 
-    fun getAction2Text(): CharSequence? = action2?.text
+    fun getAction2Text(): CharSequence? = actionButton2?.text
 
     fun setAction2Text(value: CharSequence?) {
-        action2?.hideIf(value.toString().isBlank())
-        action2?.text = value
+        actionButton2?.hideIf(value.toString().isBlank())
+        actionButton2?.text = value
     }
 
     fun getSupplementalAction1Drawable(): Drawable? = supplementalAction1?.drawable
