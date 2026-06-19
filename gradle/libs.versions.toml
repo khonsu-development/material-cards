@@ -2,7 +2,7 @@
 agp = "9.2.1"
 ktlint = "14.2.0"
 
-androidx-core-ktx = "1.18.0"
+androidx-core-ktx = "1.19.0"
 androidx-appcompat = "1.7.1"
 androidx-constraintlayout = "2.2.1"
 google-material = "1.14.0"
