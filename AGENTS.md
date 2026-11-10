@@ -2,6 +2,10 @@
 
 Guidance for AI agents working on this codebase.
 
+## Task tracking
+
+Trello is the source of truth for tasks. This library has no board of its own. Track work here on the [Khonsu Development board](https://trello.com/b/g6H53j4z/khonsu-development), which covers work across the Khonsu Development apps. App-specific work stays on that app's board.
+
 ## Project overview
 
 **Material Cards** is an Android library that provides a collection of pre-built Material Design
