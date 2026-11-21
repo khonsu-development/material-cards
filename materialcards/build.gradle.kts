@@ -8,7 +8,12 @@ group = "eu.khonsu.libraries"
 version = "1.1-SNAPSHOT"
 
 android {
-    compileSdk = 37
+    compileSdk {
+        version =
+            release(37) {
+                minorApiLevel = 2
+            }
+    }
     namespace = "eu.khonsu.libraries.materialcards"
     publishing {
         singleVariant("release") {}
